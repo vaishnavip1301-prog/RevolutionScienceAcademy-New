@@ -1,0 +1,7064 @@
+/* =========================================================
+   REVOLUTION SCIENCE ACADEMY
+   BLUE + WHITE + YELLOW THEME
+========================================================= */
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+:root {
+    --rsa-blue: #0866b3;
+    --rsa-dark-blue: #064a82;
+    --rsa-deep-blue: #03345f;
+    --rsa-light-blue: #eef7ff;
+    --rsa-soft-blue: #dceeff;
+    --rsa-yellow: #f5c400;
+    --rsa-light-yellow: #fff8d6;
+    --rsa-border: #e5e7eb;
+    --rsa-text: #172033;
+    --rsa-muted: #687386;
+    --rsa-white: #ffffff;
+    --rsa-dark: #111827;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--rsa-text);
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a {
+    transition: all 0.25s ease;
+}
+
+::selection {
+    background-color: var(--rsa-blue);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BOOTSTRAP FOCUS
+========================================================= */
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.15rem rgba(8, 102, 179, 0.20);
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.rsa-topbar {
+    background: linear-gradient( 90deg, var(--rsa-yellow), #e9c100, var(--rsa-blue) );
+    color: #111111;
+    font-size: 13px;
+}
+
+    .rsa-topbar .container {
+        min-height: 44px;
+    }
+
+    .rsa-topbar span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .rsa-topbar i {
+        font-size: 13px;
+    }
+
+    .rsa-topbar a {
+        color: #064a82;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+        .rsa-topbar a:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.rsa-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--rsa-border);
+    min-height: 90px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.rsa-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.rsa-logo {
+    width: 66px;
+    height: 66px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--rsa-soft-blue);
+    box-shadow: 0 4px 12px rgba(8, 102, 179, 0.15);
+}
+
+.rsa-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.rsa-brand-name {
+    color: var(--rsa-blue);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.rsa-brand-text small {
+    margin-top: 5px;
+    color: #555555;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.rsa-nav-link,
+.rsa-navbar .nav-link {
+    color: #252525 !important;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 14px !important;
+    margin: 0 2px;
+    border-radius: 25px;
+}
+
+    .rsa-nav-link:hover,
+    .rsa-navbar .nav-link:hover {
+        color: var(--rsa-blue) !important;
+        background-color: var(--rsa-light-blue);
+    }
+
+    .rsa-navbar .nav-link.active {
+        color: #ffffff !important;
+        background-color: var(--rsa-blue);
+    }
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.rsa-dropdown {
+    min-width: 245px;
+    padding: 9px;
+    margin-top: 12px !important;
+    background-color: #ffffff;
+    border: 0;
+    border-top: 3px solid var(--rsa-blue);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+    .rsa-dropdown .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+
+        .rsa-dropdown .dropdown-item i {
+            width: 20px;
+            color: var(--rsa-blue);
+        }
+
+        .rsa-dropdown .dropdown-item:hover {
+            color: var(--rsa-blue);
+            background-color: var(--rsa-light-blue);
+            transform: translateX(3px);
+        }
+
+    .rsa-dropdown .dropdown-divider {
+        margin: 7px 0;
+    }
+
+
+/* =========================================================
+   NAVBAR ENQUIRY BUTTON
+========================================================= */
+
+.rsa-enquiry-btn,
+.rsa-nav-enquiry {
+    background: linear-gradient( 135deg, var(--rsa-blue), var(--rsa-dark-blue) );
+    color: #ffffff !important;
+    border: 0;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 7px 18px rgba(8, 102, 179, 0.22);
+}
+
+    .rsa-enquiry-btn:hover,
+    .rsa-nav-enquiry:hover {
+        color: #ffffff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(8, 102, 179, 0.30);
+    }
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+.navbar-toggler {
+    border: 1px solid #dddddd;
+    padding: 7px 10px;
+}
+
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 3px rgba(8, 102, 179, 0.10);
+    }
+
+.navbar-toggler-icon {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.rsa-hero {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient( circle at 85% 20%, rgba(255, 255, 255, 0.12), transparent 30% ), linear-gradient( 125deg, #03345f 0%, #075a9f 48%, #0874c9 100% );
+}
+
+    .rsa-hero::before {
+        content: "";
+        position: absolute;
+        width: 620px;
+        height: 620px;
+        border: 85px solid rgba(255, 255, 255, 0.035);
+        transform: rotate(35deg);
+        top: -390px;
+        left: -180px;
+        border-radius: 30px;
+    }
+
+    .rsa-hero::after {
+        content: "";
+        position: absolute;
+        width: 480px;
+        height: 480px;
+        border: 70px solid rgba(255, 255, 255, 0.035);
+        transform: rotate(35deg);
+        right: -220px;
+        bottom: -330px;
+        border-radius: 30px;
+    }
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.rsa-hero-content {
+    position: relative;
+    z-index: 5;
+    padding: 95px 0;
+}
+
+.rsa-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--rsa-yellow);
+    color: #172033;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+
+.rsa-hero-title {
+    margin-top: 22px;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+    .rsa-hero-title span {
+        color: var(--rsa-yellow);
+    }
+
+.rsa-hero-description {
+    max-width: 630px;
+    margin-top: 22px;
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HERO QUOTE
+========================================================= */
+
+.rsa-hero-quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 590px;
+    margin-top: 20px;
+    padding: 14px 18px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--rsa-yellow);
+    border-radius: 0 10px 10px 0;
+}
+
+    .rsa-hero-quote i {
+        color: var(--rsa-yellow);
+        font-size: 24px;
+    }
+
+    .rsa-hero-quote p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .rsa-hero-quote span {
+        display: block;
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 12px;
+    }
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.rsa-hero-primary {
+    background-color: var(--rsa-yellow);
+    color: #172033;
+    border: 2px solid var(--rsa-yellow);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 12px 26px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(245, 196, 0, 0.20);
+}
+
+    .rsa-hero-primary:hover {
+        background-color: #ffd52a;
+        border-color: #ffd52a;
+        color: #111827;
+        transform: translateY(-2px);
+    }
+
+.rsa-hero-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 8px;
+}
+
+    .rsa-hero-secondary:hover {
+        background-color: #ffffff;
+        color: var(--rsa-blue);
+        transform: translateY(-2px);
+    }
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.rsa-hero-image-area {
+    position: relative;
+    z-index: 3;
+    min-height: 570px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.rsa-hero-image {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 55% 0 0 55%;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   HERO FLOATING CARD
+========================================================= */
+
+.rsa-hero-card {
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 13px 18px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.20);
+}
+
+.rsa-hero-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rsa-light-yellow);
+    color: #c79d00;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   FOCUS STRIP
+========================================================= */
+
+.rsa-focus-strip {
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.rsa-focus-item {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 25px;
+    border-right: 1px solid var(--rsa-border);
+}
+
+    .rsa-focus-item:last-child {
+        border-right: 0;
+    }
+
+.rsa-focus-title {
+    color: var(--rsa-blue);
+    font-weight: 800;
+}
+
+.rsa-focus-item p {
+    margin: 4px 0 0;
+    color: var(--rsa-muted);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.rsa-section {
+    padding: 85px 0;
+}
+
+.rsa-section-light {
+    background-color: var(--rsa-light-blue);
+}
+
+.rsa-section-label {
+    display: inline-block;
+    color: var(--rsa-blue);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.rsa-section-title {
+    margin-top: 8px;
+    color: #202020;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+    .rsa-section-title span {
+        color: var(--rsa-blue);
+    }
+
+.rsa-section-description {
+    max-width: 700px;
+    color: var(--rsa-muted);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   GENERAL CARDS
+========================================================= */
+
+.rsa-card {
+    height: 100%;
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #edf0f4;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+    .rsa-card:hover {
+        transform: translateY(-7px);
+        border-color: var(--rsa-soft-blue);
+        box-shadow: 0 18px 40px rgba(0, 65, 120, 0.10) !important;
+    }
+
+    .rsa-card h3 {
+        color: #172033;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .rsa-card p {
+        color: var(--rsa-muted);
+        line-height: 1.7;
+    }
+
+.rsa-card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rsa-light-blue);
+    color: var(--rsa-blue);
+    border-radius: 14px;
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.rsa-stat-card {
+    padding: 28px 20px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+    .rsa-stat-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--rsa-blue);
+        box-shadow: 0 12px 30px rgba(0, 65, 120, 0.10);
+    }
+
+.rsa-stat-number {
+    color: var(--rsa-blue);
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.rsa-stat-label {
+    margin-top: 4px;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   COURSE CARDS
+========================================================= */
+
+.rsa-course-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+    .rsa-course-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 18px 40px rgba(0, 65, 120, 0.12);
+    }
+
+.rsa-course-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.rsa-course-content {
+    padding: 24px;
+}
+
+    .rsa-course-content .badge {
+        background-color: var(--rsa-light-yellow);
+        color: #806600;
+        font-size: 10px;
+        font-weight: 800;
+        padding: 7px 10px;
+    }
+
+.rsa-course-title {
+    color: #202020;
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.rsa-course-description {
+    color: var(--rsa-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOOTSTRAP BUTTON OVERRIDE
+========================================================= */
+
+.btn-primary {
+    background-color: var(--rsa-blue);
+    border-color: var(--rsa-blue);
+}
+
+    .btn-primary:hover {
+        background-color: var(--rsa-dark-blue);
+        border-color: var(--rsa-dark-blue);
+    }
+
+.btn-outline-primary {
+    color: var(--rsa-blue);
+    border-color: var(--rsa-blue);
+}
+
+    .btn-outline-primary:hover {
+        background-color: var(--rsa-blue);
+        border-color: var(--rsa-blue);
+        color: #ffffff;
+    }
+
+
+/* =========================================================
+   TESTIMONIAL
+========================================================= */
+
+.rsa-testimonial {
+    height: 100%;
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+    .rsa-testimonial:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 65, 120, 0.10);
+    }
+
+.rsa-testimonial-icon {
+    color: var(--rsa-blue);
+    font-size: 30px;
+}
+
+.rsa-testimonial-text {
+    margin-top: 15px;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.rsa-testimonial-name {
+    margin-top: 20px;
+    color: var(--rsa-blue);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.rsa-cta {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient( circle at 85% 20%, rgba(255, 255, 255, 0.10), transparent 30% ), linear-gradient( 135deg, var(--rsa-deep-blue), var(--rsa-blue) );
+    color: #ffffff;
+    padding: 75px 0;
+}
+
+    .rsa-cta::after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border: 55px solid rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        right: -100px;
+        top: -100px;
+    }
+
+.rsa-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.rsa-cta h2 {
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 800;
+}
+
+    .rsa-cta h2 span {
+        color: var(--rsa-yellow);
+    }
+
+.rsa-cta p {
+    max-width: 650px;
+    margin: 15px auto 25px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.rsa-footer {
+    padding: 65px 0 25px;
+    background-color: #071a2c;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.rsa-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .rsa-footer-brand img {
+        width: 58px;
+        height: 58px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .rsa-footer-brand h5 {
+        margin: 0;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+    }
+
+    .rsa-footer-brand span {
+        color: #bbbbbb;
+        font-size: 12px;
+    }
+
+.rsa-footer p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.rsa-footer-title {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.rsa-footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .rsa-footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .rsa-footer-links a {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+    }
+
+        .rsa-footer-links a:hover {
+            color: var(--rsa-yellow);
+            padding-left: 4px;
+        }
+
+.rsa-footer-contact p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.rsa-footer-contact i {
+    margin-top: 3px;
+    color: var(--rsa-yellow);
+    min-width: 18px;
+}
+
+.rsa-footer-divider {
+    margin: 40px 0 20px;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+.form-control,
+.form-select {
+    min-height: 48px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--rsa-blue);
+        box-shadow: 0 0 0 0.18rem rgba(8, 102, 179, 0.12);
+    }
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .rsa-navbar {
+        min-height: auto;
+    }
+
+    .rsa-brand-name {
+        font-size: 16px;
+    }
+
+    .rsa-brand-text small {
+        font-size: 9px;
+    }
+
+    .rsa-navbar .nav-link {
+        margin: 3px 0;
+        border-radius: 8px;
+    }
+
+    .rsa-enquiry-btn,
+    .rsa-nav-enquiry {
+        display: inline-block;
+        margin: 12px 0 15px;
+    }
+
+    .rsa-dropdown {
+        margin-top: 0 !important;
+        border-top: 0;
+        box-shadow: none;
+        border-radius: 8px;
+    }
+
+    .rsa-hero-content {
+        padding: 70px 0 45px;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 420px;
+    }
+
+    .rsa-hero-image {
+        height: 420px;
+        border-radius: 0;
+    }
+
+    .rsa-hero-card {
+        left: 25px;
+        bottom: 25px;
+    }
+
+    .rsa-section {
+        padding: 70px 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .rsa-topbar {
+        font-size: 11px;
+    }
+
+        .rsa-topbar .container {
+            min-height: 40px;
+        }
+
+        .rsa-topbar .d-flex {
+            justify-content: center !important;
+        }
+
+    .rsa-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .rsa-brand-name {
+        font-size: 15px;
+    }
+
+    .rsa-brand-text small {
+        font-size: 8px;
+        letter-spacing: 1.2px;
+    }
+
+    .rsa-hero-title {
+        font-size: 42px;
+        letter-spacing: -0.8px;
+    }
+
+    .rsa-hero-description {
+        font-size: 15px;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 350px;
+    }
+
+    .rsa-hero-image {
+        height: 350px;
+    }
+
+    .rsa-focus-item {
+        border-right: 0;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+        .rsa-focus-item:last-child {
+            border-bottom: 0;
+        }
+
+    .rsa-stat-number {
+        font-size: 32px;
+    }
+
+    .rsa-section-title {
+        font-size: 31px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .rsa-hero-title {
+        font-size: 36px;
+    }
+
+    .rsa-hero-content {
+        padding: 60px 0 35px;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 300px;
+    }
+
+    .rsa-hero-image {
+        height: 300px;
+    }
+
+    .rsa-hero-card {
+        left: 15px;
+        bottom: 15px;
+        padding: 10px 13px;
+    }
+
+    .rsa-hero-card-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .rsa-section {
+        padding: 55px 0;
+    }
+
+    .rsa-course-image {
+        height: 190px;
+    }
+
+    .rsa-footer {
+        padding-top: 50px;
+    }
+}
+
+
+/* =========================
+   ABOUT HERO
+========================= */
+
+.rsa-about-hero {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(3, 52, 95, 0.95), rgba(8, 102, 179, 0.88)), url('/images/about/classroom.jpg') center/cover no-repeat;
+}
+
+.rsa-about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 52, 95, 0.25);
+}
+
+.rsa-about-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.rsa-about-label {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(245, 196, 0, 0.7);
+    border-radius: 50px;
+    background: rgba(245, 196, 0, 0.15);
+    color: #f5c400;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.rsa-about-title {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+    .rsa-about-title span {
+        color: #f5c400;
+    }
+
+.rsa-about-subtitle {
+    max-width: 750px;
+    margin: 22px auto 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   COMMON ABOUT SECTION
+========================= */
+
+.rsa-about-section {
+    padding: 90px 0;
+    background: #fff;
+}
+
+.rsa-about-section-light {
+    background: #f5faff;
+}
+
+.rsa-about-section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #0866b3;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.rsa-about-heading {
+    margin-bottom: 20px;
+    color: #03345f;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+    .rsa-about-heading span {
+        color: #0866b3;
+    }
+
+.rsa-about-description {
+    color: #5f6f7f;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   FOUNDER
+========================= */
+
+.rsa-founder-image-box {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #dceeff;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(3, 52, 95, 0.16);
+}
+
+
+
+.rsa-founder-photo {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: #eef7ff;
+}
+.rsa-founder-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.5s ease   
+
+}
+.rsa-founder-image-box:hover .rsa-founder-photo img {
+    transform: scale(1.04);
+}
+
+.rsa-founder-info {
+    padding: 26px 25px 28px;
+    text-align: center;
+    background: #ffffff;
+    border-top: 4px solid #f5c400;
+}
+.rsa-founder-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 12px;
+    border-radius: 50px;
+    background: #eef7ff;
+    color: #0866b3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+.rsa-founder-name {
+    margin: 0;
+    color: #03345f;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.rsa-founder-role {
+    margin: 7px 0 0;
+    color: #0866b3;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.rsa-founder-details {
+    max-width: 420px;
+    margin: 12px auto 0;
+    color: #687887;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   VISION / FEATURES
+========================= */
+
+.rsa-about-content {
+    padding-left: 20px;
+}
+
+.rsa-about-quote {
+    margin: 25px 0 35px;
+    padding: 25px 28px;
+    border-left: 5px solid #f5c400;
+    border-radius: 0 15px 15px 0;
+    background: #f5faff;
+    color: #405261;
+    font-size: 18px;
+    line-height: 1.9;
+    font-style: italic;
+}
+
+.rsa-about-feature {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.rsa-about-feature-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #eef7ff;
+    color: #0866b3;
+    font-size: 22px;
+}
+
+.rsa-about-feature-content h3 {
+    margin: 0 0 8px;
+    color: #03345f;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rsa-about-feature-content p {
+    margin: 0;
+    color: #687887;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   KEY STATS
+========================= */
+
+.rsa-about-stats {
+    position: relative;
+    padding: 75px 0;
+    overflow: hidden;
+    background: linear-gradient( 135deg, #03345f, #0866b3 );
+}
+
+.rsa-about-stat {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 28px 20px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+    .rsa-about-stat:last-child {
+        border-right: none;
+    }
+
+.rsa-about-stat-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #f5c400;
+    color: #03345f;
+    font-size: 22px;
+}
+
+.rsa-about-stat-number {
+    margin: 0;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.rsa-about-stat-label {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   MISSION CARDS
+========================= */
+
+.rsa-mission-card {
+    height: 100%;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #e1edf7;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(3, 52, 95, 0.07);
+    transition: all 0.3s ease;
+}
+
+    .rsa-mission-card:hover {
+        transform: translateY(-8px);
+        border-color: #9bcdf3;
+        box-shadow: 0 18px 45px rgba(3, 52, 95, 0.13);
+    }
+
+.rsa-mission-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    background: #eef7ff;
+    color: #0866b3;
+    font-size: 25px;
+}
+
+.rsa-mission-card h3 {
+    margin-bottom: 12px;
+    color: #03345f;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.rsa-mission-card p {
+    margin: 0;
+    color: #687887;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.rsa-achievement-box {
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient( 135deg, #fff8d6, #fff );
+    border: 1px solid #f5d65c;
+    border-radius: 18px;
+}
+
+    .rsa-achievement-box h3 {
+        margin-bottom: 20px;
+        color: #03345f;
+        font-weight: 800;
+    }
+
+.rsa-achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #435565;
+    font-weight: 600;
+}
+
+    .rsa-achievement-item:last-child {
+        margin-bottom: 0;
+    }
+
+.rsa-achievement-check {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f5c400;
+    color: #03345f;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .rsa-about-hero {
+        min-height: 380px;
+    }
+
+    .rsa-about-section {
+        padding: 70px 0;
+    }
+
+    .rsa-about-content {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .rsa-founder-image {
+        height: 480px;
+    }
+
+    .rsa-about-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+        .rsa-about-stat:nth-child(3),
+        .rsa-about-stat:nth-child(4) {
+            border-bottom: none;
+        }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .rsa-about-hero {
+        min-height: 340px;
+    }
+
+    .rsa-about-title {
+        font-size: 36px;
+    }
+
+    .rsa-about-subtitle {
+        font-size: 15px;
+    }
+
+    .rsa-about-section {
+        padding: 55px 0;
+    }
+
+    .rsa-founder-image {
+        height: 400px;
+    }
+
+    .rsa-about-content {
+        padding-left: 0;
+    }
+
+    .rsa-about-quote {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .rsa-about-stat-number {
+        font-size: 36px;
+    }
+
+    .rsa-mission-card {
+        padding: 25px;
+    }
+}
+
+
+/* =========================================================
+   GLOBAL RESPONSIVE IMPROVEMENTS
+   Desktop + Tablet + Mobile
+========================================================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .rsa-hero-content {
+        padding: 80px 0;
+    }
+
+    .rsa-hero-title {
+        font-size: 54px;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 520px;
+    }
+
+    .rsa-hero-image {
+        height: 520px;
+    }
+
+    .rsa-founder-photo {
+        height: 480px;
+    }
+
+    .rsa-about-heading {
+        font-size: 40px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    /* Navbar */
+
+    .rsa-navbar {
+        min-height: auto;
+        padding: 10px 0;
+    }
+
+    .rsa-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .rsa-brand-name {
+        font-size: 16px;
+    }
+
+    .rsa-brand-text small {
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+    .rsa-navbar .nav-link {
+        width: 100%;
+        margin: 3px 0;
+        padding: 10px 14px !important;
+        border-radius: 8px;
+    }
+
+    .rsa-enquiry-btn,
+    .rsa-nav-enquiry {
+        display: inline-block;
+        margin: 12px 0 15px;
+    }
+
+
+    /* Hero */
+
+    .rsa-hero-content {
+        padding: 65px 0 45px;
+    }
+
+    .rsa-hero-title {
+        font-size: 48px;
+    }
+
+    .rsa-hero-description {
+        max-width: 100%;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 430px;
+    }
+
+    .rsa-hero-image {
+        width: 100%;
+        height: 430px;
+        border-radius: 0;
+    }
+
+
+    /* Focus */
+
+    .rsa-focus-item {
+        min-height: 95px;
+        padding: 18px;
+    }
+
+
+    /* About */
+
+    .rsa-about-hero {
+        min-height: 390px;
+    }
+
+    .rsa-about-section {
+        padding: 70px 0;
+    }
+
+    .rsa-about-content {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+    .rsa-founder-photo {
+        height: 500px;
+    }
+
+    .rsa-founder-image-box {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+
+    /* About Stats */
+
+    .rsa-about-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+
+    /* Cards */
+
+    .rsa-card {
+        padding: 24px;
+    }
+
+    .rsa-mission-card {
+        padding: 28px;
+    }
+
+    .rsa-course-content {
+        padding: 20px;
+    }
+
+
+    /* Footer */
+
+    .rsa-footer {
+        padding-top: 55px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /* -------------------------
+       Topbar
+    ------------------------- */
+
+    .rsa-topbar {
+        font-size: 11px;
+    }
+
+        .rsa-topbar .container {
+            min-height: 38px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .rsa-topbar .d-flex {
+            flex-wrap: wrap;
+            justify-content: center !important;
+            gap: 6px 14px;
+        }
+
+        .rsa-topbar span {
+            font-size: 11px;
+        }
+
+
+    /* -------------------------
+       Navbar
+    ------------------------- */
+
+    .rsa-navbar {
+        padding: 8px 0;
+    }
+
+    .rsa-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .rsa-brand {
+        gap: 8px;
+    }
+
+    .rsa-brand-name {
+        font-size: 14px;
+    }
+
+    .rsa-brand-text small {
+        margin-top: 3px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .navbar-toggler {
+        padding: 6px 9px;
+    }
+
+
+    /* -------------------------
+       Hero
+    ------------------------- */
+
+    .rsa-hero-content {
+        padding: 55px 0 35px;
+    }
+
+    .rsa-hero-label {
+        font-size: 10px;
+        padding: 7px 12px;
+    }
+
+    .rsa-hero-title {
+        margin-top: 18px;
+        font-size: 38px;
+        line-height: 1.12;
+    }
+
+    .rsa-hero-description {
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .rsa-hero-quote {
+        margin-top: 16px;
+        padding: 12px 14px;
+    }
+
+        .rsa-hero-quote p {
+            font-size: 12px;
+        }
+
+    .rsa-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rsa-hero-primary,
+    .rsa-hero-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 330px;
+    }
+
+    .rsa-hero-image {
+        width: 100%;
+        height: 330px;
+        border-radius: 0;
+        object-position: center;
+    }
+
+    .rsa-hero-card {
+        left: 15px;
+        bottom: 15px;
+        padding: 10px 13px;
+    }
+
+
+    /* -------------------------
+       Sections
+    ------------------------- */
+
+    .rsa-section {
+        padding: 55px 0;
+    }
+
+    .rsa-section-title {
+        font-size: 30px;
+    }
+
+    .rsa-section-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       About Hero
+    ------------------------- */
+
+    .rsa-about-hero {
+        min-height: 340px;
+        padding: 50px 0;
+    }
+
+    .rsa-about-label {
+        font-size: 10px;
+        padding: 7px 13px;
+        letter-spacing: 1px;
+    }
+
+    .rsa-about-title {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    .rsa-about-subtitle {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       About Section
+    ------------------------- */
+
+    .rsa-about-section {
+        padding: 55px 0;
+    }
+
+    .rsa-about-heading {
+        font-size: 31px;
+        line-height: 1.25;
+    }
+
+    .rsa-about-description {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .rsa-about-content {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+
+    /* -------------------------
+       Founder Image
+    ------------------------- */
+
+    .rsa-founder-image-box {
+        border-radius: 18px;
+    }
+
+    .rsa-founder-photo {
+        height: 390px;
+    }
+
+        .rsa-founder-photo img {
+            object-position: center top;
+        }
+
+    .rsa-founder-info {
+        padding: 22px 18px 24px;
+    }
+
+    .rsa-founder-name {
+        font-size: 20px;
+    }
+
+    .rsa-founder-role {
+        font-size: 14px;
+    }
+
+    .rsa-founder-details {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* -------------------------
+       About Quote
+    ------------------------- */
+
+    .rsa-about-quote {
+        margin: 20px 0 28px;
+        padding: 18px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       About Features
+    ------------------------- */
+
+    .rsa-about-feature {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .rsa-about-feature-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 18px;
+    }
+
+    .rsa-about-feature-content h3 {
+        font-size: 17px;
+    }
+
+    .rsa-about-feature-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       About Stats
+    ------------------------- */
+
+    .rsa-about-stats {
+        padding: 45px 0;
+    }
+
+    .rsa-about-stat {
+        padding: 22px 10px;
+    }
+
+    .rsa-about-stat-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .rsa-about-stat-number {
+        font-size: 30px;
+    }
+
+    .rsa-about-stat-label {
+        font-size: 12px;
+    }
+
+
+    /* -------------------------
+       Mission Cards
+    ------------------------- */
+
+    .rsa-mission-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .rsa-mission-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .rsa-mission-card h3 {
+        font-size: 19px;
+    }
+
+    .rsa-mission-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       Achievement Box
+    ------------------------- */
+
+    .rsa-achievement-box {
+        margin-top: 35px;
+        padding: 22px 18px;
+    }
+
+        .rsa-achievement-box h3 {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+    .rsa-achievement-item {
+        align-items: flex-start;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* -------------------------
+       Course Cards
+    ------------------------- */
+
+    .rsa-course-image {
+        height: 190px;
+    }
+
+    .rsa-course-content {
+        padding: 20px;
+    }
+
+    .rsa-course-title {
+        font-size: 19px;
+    }
+
+
+    /* -------------------------
+       Statistics
+    ------------------------- */
+
+    .rsa-stat-card {
+        padding: 22px 15px;
+    }
+
+    .rsa-stat-number {
+        font-size: 30px;
+    }
+
+
+    /* -------------------------
+       CTA
+    ------------------------- */
+
+    .rsa-cta {
+        padding: 55px 0;
+    }
+
+        .rsa-cta h2 {
+            font-size: 30px;
+        }
+
+        .rsa-cta p {
+            font-size: 14px;
+        }
+
+
+    /* -------------------------
+       Footer
+    ------------------------- */
+
+    .rsa-footer {
+        padding: 45px 0 20px;
+    }
+
+    .rsa-footer-title {
+        margin-top: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    /* Navbar */
+
+    .rsa-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .rsa-brand-name {
+        font-size: 13px;
+    }
+
+    .rsa-brand-text small {
+        font-size: 6.5px;
+    }
+
+
+    /* Hero */
+
+    .rsa-hero-title {
+        font-size: 34px;
+    }
+
+    .rsa-hero-image-area {
+        min-height: 290px;
+    }
+
+    .rsa-hero-image {
+        height: 290px;
+    }
+
+
+    /* About */
+
+    .rsa-about-title {
+        font-size: 32px;
+    }
+
+    .rsa-about-hero {
+        min-height: 320px;
+    }
+
+    .rsa-about-heading {
+        font-size: 28px;
+    }
+
+
+    /* Founder */
+
+    .rsa-founder-photo {
+        height: 350px;
+    }
+
+    .rsa-founder-name {
+        font-size: 19px;
+    }
+
+    .rsa-founder-details {
+        font-size: 12px;
+    }
+
+
+    /* Stats */
+
+    .rsa-about-stat-number {
+        font-size: 27px;
+    }
+
+    .rsa-about-stat-label {
+        font-size: 11px;
+    }
+
+
+    /* Buttons */
+
+    .rsa-hero-primary,
+    .rsa-hero-secondary {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .rsa-brand-name {
+        font-size: 12px;
+    }
+
+    .rsa-brand-text small {
+        display: none;
+    }
+
+    .rsa-hero-title {
+        font-size: 30px;
+    }
+
+    .rsa-about-title {
+        font-size: 29px;
+    }
+
+    .rsa-founder-photo {
+        height: 320px;
+    }
+
+    .rsa-founder-name {
+        font-size: 18px;
+    }
+
+    .rsa-about-stat-number {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   ENQUIRY FORM
+========================================================= */
+
+.rsa-enquiry-page {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    background: linear-gradient( 135deg, #eef7ff 0%, #ffffff 50%, #fff8d6 100% );
+    padding: 70px 0;
+}
+
+.rsa-enquiry-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #dceeff;
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(3, 52, 95, 0.14);
+}
+
+.rsa-enquiry-header {
+    position: relative;
+    padding: 40px 35px;
+    background: linear-gradient( 135deg, var(--rsa-deep-blue), var(--rsa-blue) );
+    color: #ffffff;
+}
+
+    .rsa-enquiry-header::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        right: -70px;
+        top: -90px;
+        border-radius: 50%;
+        background: rgba(245, 196, 0, 0.12);
+    }
+
+    .rsa-enquiry-header .rsa-modal-label {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--rsa-yellow);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .rsa-enquiry-header h1 {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 34px;
+        font-weight: 800;
+    }
+
+    .rsa-enquiry-header p {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin: 10px auto 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+.rsa-enquiry-body {
+    padding: 38px;
+}
+
+    .rsa-enquiry-body .form-label {
+        margin-bottom: 8px;
+        color: var(--rsa-deep-blue);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .rsa-enquiry-body .form-control,
+    .rsa-enquiry-body .form-select {
+        min-height: 52px;
+        padding: 12px 15px;
+        border: 1px solid #d7e4ee;
+        border-radius: 12px;
+        background: #f8fbfe;
+        color: #263746;
+        font-size: 14px;
+        transition: all 0.25s ease;
+    }
+
+    .rsa-enquiry-body textarea.form-control {
+        min-height: 130px;
+        resize: vertical;
+    }
+
+    .rsa-enquiry-body .form-control:focus,
+    .rsa-enquiry-body .form-select:focus {
+        border-color: var(--rsa-blue);
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(8, 102, 179, 0.10);
+    }
+
+    .rsa-enquiry-body .text-danger {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+.rsa-modal-submit {
+    width: 100%;
+    min-height: 54px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--rsa-yellow);
+    color: var(--rsa-deep-blue);
+    font-size: 15px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+    .rsa-modal-submit:hover {
+        background: #e5b800;
+        color: var(--rsa-deep-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(245, 196, 0, 0.25);
+    }
+
+.rsa-enquiry-body .alert {
+    border: 0;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   REVOLUTION SCIENCE ACADEMY - ENQUIRY
+======================================== */
+.rsa-enquiry-page {
+    padding: 45px 0;
+    background: #f3f6fc;
+    min-height: 70vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.rsa-enquiry-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e5eaf3;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 38px rgba(18, 43, 86, 0.08);
+}
+
+.rsa-enquiry-header {
+    padding: 27px 28px 23px;
+    background: linear-gradient(135deg, #102c59, #174b91);
+    color: #ffffff;
+}
+
+.rsa-enquiry-label {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #d8e8ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.rsa-enquiry-header h1 {
+    margin: 0 0 9px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.rsa-enquiry-header p {
+    max-width: 460px;
+    margin: 0 auto;
+    color: #e2ebfa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.rsa-enquiry-body {
+    padding: 27px 32px 25px;
+}
+
+    .rsa-enquiry-body .form-label {
+        display: block;
+        margin-bottom: 7px;
+        color: #20324d;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+.rsa-required {
+    color: #dc3545;
+}
+
+.rsa-enquiry-body .form-control,
+.rsa-enquiry-body .form-select {
+    min-height: 44px;
+    padding: 10px 13px;
+    border: 1px solid #dce3ef;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #26364d;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .rsa-enquiry-body .form-control::placeholder {
+        color: #9aa6b8;
+    }
+
+    .rsa-enquiry-body .form-control:focus,
+    .rsa-enquiry-body .form-select:focus {
+        border-color: #2864b4;
+        box-shadow: 0 0 0 3px rgba(40, 100, 180, 0.12);
+        outline: none;
+    }
+
+.rsa-enquiry-body .rsa-enquiry-message {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.rsa-enquiry-body .text-danger {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.rsa-enquiry-submit {
+    min-width: 205px;
+    margin-top: 5px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: #174b91;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .rsa-enquiry-submit:hover,
+    .rsa-enquiry-submit:focus {
+        background: #102c59;
+        color: #ffffff;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 14px rgba(16, 44, 89, 0.18);
+    }
+
+.rsa-enquiry-note {
+    margin: 14px 0 0;
+    color: #7a879a;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+    .rsa-enquiry-note i {
+        color: #198754;
+    }
+
+.rsa-enquiry-body .alert {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+@media (max-width: 575.98px) {
+    .rsa-enquiry-page {
+        padding: 25px 12px;
+    }
+
+    .rsa-enquiry-header {
+        padding: 24px 17px 20px;
+    }
+
+        .rsa-enquiry-header h1 {
+            font-size: 25px;
+        }
+
+    .rsa-enquiry-body {
+        padding: 22px 18px;
+    }
+
+    .rsa-enquiry-submit {
+        width: 100%;
+    }
+}
+
+/* Enquiry Popup */
+.rsa-enquiry-modal .modal-dialog {
+    max-width: 650px;
+    margin: 1.25rem auto;
+}
+
+.rsa-enquiry-modal .modal-content {
+    overflow: hidden;
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 18px 55px rgba(15, 35, 70, 0.2);
+}
+
+.rsa-enquiry-modal .modal-header {
+    padding: 22px 26px;
+    border: 0;
+    background: linear-gradient(135deg, #102c59, #174b91);
+    color: #ffffff;
+}
+
+.rsa-enquiry-modal .rsa-enquiry-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #d8e8ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.rsa-enquiry-modal .modal-title {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.rsa-enquiry-modal .modal-header p {
+    color: #e2ebfa;
+    font-size: 12px;
+}
+
+.rsa-enquiry-modal .btn-close {
+    filter: invert(1);
+}
+
+.rsa-enquiry-modal .modal-body {
+    padding: 24px 26px;
+}
+
+.rsa-enquiry-modal .form-label {
+    margin-bottom: 6px;
+    color: #20324d;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.rsa-enquiry-modal .form-control,
+.rsa-enquiry-modal .form-select {
+    min-height: 42px;
+    border: 1px solid #dce3ef;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.rsa-enquiry-modal textarea.form-control {
+    min-height: 80px;
+}
+
+.rsa-enquiry-modal .form-control:focus,
+.rsa-enquiry-modal .form-select:focus {
+    border-color: #2864b4;
+    box-shadow: 0 0 0 3px rgba(40, 100, 180, 0.12);
+}
+
+.rsa-enquiry-modal .rsa-enquiry-submit {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #174b91;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+    .rsa-enquiry-modal .rsa-enquiry-submit:hover {
+        background: #102c59;
+        color: #ffffff;
+    }
+
+@media (max-width: 575.98px) {
+    .rsa-enquiry-modal .modal-dialog {
+        margin: 12px;
+    }
+
+    .rsa-enquiry-modal .modal-header,
+    .rsa-enquiry-modal .modal-body {
+        padding: 19px;
+    }
+
+    .rsa-enquiry-modal .modal-title {
+        font-size: 22px;
+    }
+}
+/* 11th Science Course Page */
+.rsa-course-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 45px 0 50px;
+    background: linear-gradient(120deg, #073763 0%, #07569a 60%, #1479bd 100%);
+    color: #fff;
+}
+
+.rsa-course-hero::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -180px;
+    right: 5%;
+    border: 35px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+}
+
+.rsa-course-badge {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: #ffc800;
+    color: #102b46;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.rsa-course-hero h1 {
+    margin-bottom: 14px;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+    .rsa-course-hero h1 span {
+        color: #ffc800;
+    }
+
+.rsa-course-hero-text {
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.rsa-course-hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.rsa-course-primary-btn,
+.rsa-course-cta-btn {
+    padding: 12px 22px;
+    border: 2px solid #ffc800;
+    border-radius: 7px;
+    background: #ffc800;
+    color: #102b46;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+    .rsa-course-primary-btn:hover,
+    .rsa-course-cta-btn:hover {
+        border-color: #fff;
+        background: #fff;
+        color: #073763;
+        transform: translateY(-2px);
+    }
+
+.rsa-course-outline-btn {
+    padding: 12px 22px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 700;
+}
+
+    .rsa-course-outline-btn:hover {
+        background: #fff;
+        color: #073763;
+    }
+
+.rsa-course-overview {
+    background: #f5f8fc;
+}
+
+.rsa-section-heading {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.rsa-section-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #0866a8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.rsa-section-heading h2,
+.rsa-subjects-heading {
+    color: #10385e;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+}
+
+.rsa-section-heading > p,
+.rsa-course-subjects > .container > .row p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.rsa-course-info-card {
+    height: 100%;
+    padding: 25px 20px;
+    border: 1px solid #e6edf5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 22px rgba(20, 58, 95, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .rsa-course-info-card:hover,
+    .rsa-subject-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(20, 58, 95, 0.12);
+    }
+
+    .rsa-course-info-card > i,
+    .rsa-subject-card > i {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: #0866a8;
+        font-size: 32px;
+    }
+
+    .rsa-course-info-card h5,
+    .rsa-subject-card h5 {
+        color: #10385e;
+        font-weight: 750;
+    }
+
+    .rsa-course-info-card p,
+    .rsa-subject-card p {
+        margin-bottom: 0;
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+.rsa-course-subjects {
+    background: #fff;
+}
+
+.rsa-subject-card {
+    height: 100%;
+    padding: 23px;
+    border: 1px solid #e5edf6;
+    border-radius: 12px;
+    background: #f8fafc;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rsa-course-benefits {
+    background: #f3f7fb;
+}
+
+.rsa-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    height: 100%;
+    padding: 22px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+    .rsa-benefit-item > i {
+        margin-top: 3px;
+        color: #0878bd;
+        font-size: 23px;
+    }
+
+    .rsa-benefit-item h5 {
+        color: #10385e;
+        font-size: 17px;
+        font-weight: 750;
+    }
+
+    .rsa-benefit-item p {
+        margin-bottom: 0;
+        color: #64748b;
+        line-height: 1.7;
+    }
+
+.rsa-course-cta {
+    background: linear-gradient(120deg, #073763, #0b65a7);
+    color: #fff;
+}
+
+    .rsa-course-cta h2 {
+        font-size: clamp(25px, 3vw, 34px);
+        font-weight: 800;
+    }
+
+    .rsa-course-cta p {
+        max-width: 680px;
+        margin: 14px auto 22px;
+        color: rgba(255, 255, 255, 0.88);
+        line-height: 1.8;
+    }
+
+@media (max-width: 767.98px) {
+    .rsa-course-hero {
+        padding: 35px 0 38px;
+    }
+
+    .rsa-course-hero-text {
+        font-size: 14px;
+    }
+
+    .rsa-course-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+        .rsa-course-hero-buttons .btn {
+            width: 100%;
+        }
+
+    .rsa-course-info-card {
+        padding: 22px 18px;
+    }
+}
+
+/* 12th Science Course Page */
+.science-hero {
+    background: linear-gradient(125deg, #073763, #0b5c91);
+    color: #fff;
+    padding: 58px 0;
+    overflow: hidden;
+}
+
+.science-badge {
+    display: inline-block;
+    color: #ffd45a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.science-hero h1 {
+    max-width: 650px;
+    font-size: clamp(34px, 4.5vw, 54px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+    .science-hero h1 span {
+        display: block;
+        color: #ffd45a;
+    }
+
+.science-hero-text {
+    max-width: 590px;
+    color: #e1edf7;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.science-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+    .science-hero-buttons .btn,
+    .science-enquiry .btn {
+        border-radius: 7px;
+        padding: 12px 22px;
+        font-weight: 700;
+    }
+
+.science-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+    .science-highlights div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .science-highlights strong {
+        font-size: 17px;
+        color: #fff;
+    }
+
+    .science-highlights span {
+        color: #d6e6f5;
+        font-size: 12px;
+    }
+
+.science-hero-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 5px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+    .science-hero-image img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+        display: block;
+    }
+
+.science-image-caption {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 15px 18px;
+    color: #fff;
+    background: rgba(5, 35, 62, 0.88);
+    border-radius: 10px;
+}
+
+    .science-image-caption span {
+        color: #ffd45a;
+        font-size: 12px;
+    }
+
+    .science-image-caption strong {
+        font-size: 17px;
+    }
+
+.section-space {
+    padding: 75px 0;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.section-kicker {
+    display: inline-block;
+    color: #0b659e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.process-heading {
+    color: #123653;
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    color: #667789;
+    line-height: 1.8;
+}
+
+.science-info-card,
+.subject-card {
+    height: 100%;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #e6edf4;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(12, 48, 76, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .science-info-card:hover,
+    .subject-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(12, 48, 76, 0.12);
+    }
+
+.science-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    background: #0b5c91;
+    border-radius: 12px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.science-info-card h4,
+.subject-card h4 {
+    color: #123653;
+    font-size: 19px;
+    font-weight: 750;
+    margin-bottom: 12px;
+}
+
+.science-info-card p,
+.subject-card p {
+    color: #697b8c;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.science-subjects {
+    background: #f4f8fc;
+}
+
+.subject-card {
+    border-bottom: 3px solid #0b659e;
+}
+
+.subject-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    color: #0b659e;
+    background: #e7f2fc;
+    border-radius: 13px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.science-note {
+    color: #738396;
+    font-size: 13px;
+}
+
+.science-check-list {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 24px;
+}
+
+    .science-check-list li {
+        position: relative;
+        padding: 10px 0 10px 30px;
+        color: #42576a;
+        line-height: 1.6;
+    }
+
+        .science-check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 21px;
+            height: 21px;
+            color: #fff;
+            background: #0b8a67;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+.process-panel {
+    padding: 30px;
+    background: #f1f7fc;
+    border: 1px solid #e0ebf5;
+    border-radius: 18px;
+}
+
+.process-panel-label {
+    display: block;
+    color: #0b659e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin-bottom: 25px;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 18px 0;
+    border-bottom: 1px solid #dce7f0;
+}
+
+    .process-step:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .process-step > span {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        color: #fff;
+        background: #0b5c91;
+        border-radius: 11px;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .process-step h5 {
+        color: #123653;
+        font-weight: 750;
+        margin-bottom: 6px;
+    }
+
+    .process-step p {
+        color: #697b8c;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+.science-enquiry {
+    background: linear-gradient(125deg, #073763, #0b5c91);
+}
+
+.science-enquiry-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.science-enquiry h2 {
+    color: #fff;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.science-enquiry p {
+    color: #e1edf7;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.science-enquiry .btn {
+    color: #123653;
+}
+
+@media (max-width: 767.98px) {
+    .science-hero {
+        padding: 42px 0;
+    }
+
+    .science-highlights {
+        gap: 18px;
+    }
+
+    .science-hero-image img {
+        height: 260px;
+    }
+
+    .section-space {
+        padding: 52px 0;
+    }
+
+    .process-panel {
+        padding: 22px;
+    }
+}
+
+
+/* ==========================================
+   JEE COURSE PAGE
+========================================== */
+.jee-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 0;
+    color: #ffffff;
+    background: linear-gradient(125deg, #061f46, #075b91);
+}
+
+.jee-hero::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: -170px;
+    right: 8%;
+    border: 55px solid rgba(255, 255, 255, 0.045);
+    border-radius: 50%;
+}
+
+.jee-eyebrow {
+    display: inline-block;
+    color: #ffd76b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.jee-hero h1 {
+    max-width: 690px;
+    font-size: clamp(36px, 5vw, 59px);
+    font-weight: 850;
+    line-height: 1.14;
+    letter-spacing: -1.2px;
+    margin-bottom: 23px;
+}
+
+    .jee-hero h1 span {
+        display: block;
+        color: #ffd76b;
+    }
+
+.jee-hero-description {
+    max-width: 600px;
+    color: #dceaf7;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.jee-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 29px;
+}
+
+    .jee-hero-actions .btn {
+        padding: 13px 21px;
+        border-radius: 8px;
+        font-weight: 700;
+    }
+
+.jee-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 39px;
+}
+
+    .jee-hero-points div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .jee-hero-points strong {
+        color: #ffffff;
+        font-size: 17px;
+    }
+
+    .jee-hero-points span {
+        color: #c8dcef;
+        font-size: 12px;
+    }
+
+.jee-hero-visual {
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.2);
+}
+
+    .jee-hero-visual img {
+        width: 100%;
+        height: 390px;
+        object-fit: cover;
+        display: block;
+        border-radius: 15px;
+    }
+
+.jee-floating-card {
+    position: absolute;
+    right: -15px;
+    bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: min(290px, 90%);
+    padding: 20px;
+    color: #15354f;
+    background: #ffffff;
+    border-left: 5px solid #ffc943;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+    .jee-floating-card span {
+        color: #0b679d;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .jee-floating-card strong {
+        font-size: 16px;
+    }
+
+/* Common sections */
+
+.jee-section {
+    padding: 82px 0;
+}
+
+.jee-section-heading {
+    max-width: 790px;
+    margin: 0 auto;
+}
+
+.jee-kicker {
+    display: inline-block;
+    color: #0b679d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    margin-bottom: 13px;
+}
+
+.jee-section-heading h2,
+.jee-audience-section h2,
+.jee-career-section h2 {
+    color: #102f4b;
+    font-size: clamp(29px, 3.4vw, 41px);
+    font-weight: 850;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 17px;
+}
+
+.jee-section-heading p,
+.jee-audience-section p,
+.jee-career-section p {
+    color: #66798b;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+    .jee-section-heading p + p {
+        margin-top: 12px;
+    }
+
+/* Main and Advanced cards */
+
+.jee-info-panel {
+    height: 100%;
+    padding: 33px;
+    border: 1px solid #e4ebf3;
+    border-radius: 19px;
+    background: #ffffff;
+    box-shadow: 0 10px 35px rgba(13, 48, 78, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .jee-info-panel:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 19px 40px rgba(13, 48, 78, 0.12);
+    }
+
+.jee-main-panel {
+    border-top: 4px solid #0878b8;
+}
+
+.jee-advanced-panel {
+    border-top: 4px solid #6c55bd;
+}
+
+.jee-panel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 22px;
+    color: #ffffff;
+    background: #0b659e;
+    border-radius: 15px;
+    font-weight: 800;
+}
+
+.jee-advanced-panel .jee-panel-icon {
+    background: #6c55bd;
+}
+
+.jee-panel-label {
+    display: block;
+    color: #0b679d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.jee-advanced-panel .jee-panel-label {
+    color: #6c55bd;
+}
+
+.jee-info-panel h3 {
+    color: #143650;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.jee-info-panel > p {
+    color: #66798b;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.jee-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0;
+}
+
+    .jee-feature-list li {
+        position: relative;
+        padding: 8px 0 8px 27px;
+        color: #42596d;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+        .jee-feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            color: #07815f;
+            font-weight: 900;
+        }
+
+.jee-text-link {
+    display: inline-block;
+    color: #086da6;
+    font-size: 14px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+    .jee-text-link:hover {
+        color: #06446d;
+        text-decoration: underline;
+    }
+
+/* Who should join */
+
+.jee-audience-section {
+    padding: 80px 0;
+    background: #f2f7fc;
+}
+
+.jee-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.jee-audience-card {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5edf5;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(12, 48, 76, 0.04);
+    transition: transform 0.25s ease;
+}
+
+    .jee-audience-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .jee-audience-card > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 37px;
+        height: 37px;
+        color: #ffffff;
+        background: #0b659e;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 17px;
+    }
+
+    .jee-audience-card h4 {
+        color: #143650;
+        font-size: 17px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .jee-audience-card p {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+/* Syllabus cards */
+
+.jee-syllabus-section {
+    background: #ffffff;
+}
+
+.jee-subject-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e1eaf3;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(12, 48, 76, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .jee-subject-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 19px 38px rgba(12, 48, 76, 0.12);
+    }
+
+.jee-subject-top {
+    min-height: 210px;
+    padding: 25px;
+    color: #ffffff;
+}
+
+.physics-top {
+    background: linear-gradient(135deg, #075080, #168fc4);
+}
+
+.chemistry-top {
+    background: linear-gradient(135deg, #075b52, #16a085);
+}
+
+.maths-top {
+    background: linear-gradient(135deg, #473b8f, #8171d1);
+}
+
+.jee-subject-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    margin-bottom: 17px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.17);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 13px;
+    font-size: 24px;
+}
+
+.jee-subject-number {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 8px;
+}
+
+.jee-subject-top h3 {
+    font-size: 26px;
+    font-weight: 850;
+    margin-bottom: 8px;
+}
+
+.jee-subject-top p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.jee-subject-content {
+    padding: 25px;
+}
+
+    .jee-subject-content h5 {
+        color: #143650;
+        font-size: 15px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .jee-subject-content ul {
+        padding-left: 18px;
+        margin-bottom: 22px;
+    }
+
+    .jee-subject-content li {
+        padding: 5px 0;
+        color: #5a6e80;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+        .jee-subject-content li::marker {
+            color: #0b78b4;
+        }
+
+.jee-skill-note {
+    padding: 16px;
+    background: #f1f7fc;
+    border-radius: 10px;
+}
+
+    .jee-skill-note strong {
+        color: #0b659e;
+        font-size: 12px;
+    }
+
+    .jee-skill-note p {
+        color: #64778a;
+        font-size: 13px;
+        line-height: 1.7;
+        margin: 7px 0 0;
+    }
+
+.jee-syllabus-notice {
+    padding: 20px 22px;
+    color: #5a6e80;
+    background: #fff9e9;
+    border: 1px solid #f2e3b5;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+    .jee-syllabus-notice strong {
+        color: #6c5010;
+    }
+
+    .jee-syllabus-notice a {
+        display: block;
+        width: fit-content;
+        margin-top: 8px;
+        color: #075b91;
+        font-weight: 750;
+        text-decoration: none;
+    }
+
+/* Learning timeline */
+
+.jee-learning-timeline {
+    position: relative;
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.jee-timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 23px;
+    padding: 0 0 33px;
+}
+
+    .jee-timeline-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 56px;
+        bottom: 0;
+        left: 26px;
+        width: 2px;
+        background: #dbe9f5;
+    }
+
+.jee-timeline-number {
+    z-index: 1;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    color: #ffffff;
+    background: #0b659e;
+    border: 5px solid #e7f2fa;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.jee-timeline-item h4 {
+    color: #143650;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 7px 0 9px;
+}
+
+.jee-timeline-item p {
+    color: #687b8c;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Comparison */
+
+.jee-comparison-section {
+    padding: 80px 0;
+    background: #f2f7fc;
+}
+
+.jee-comparison-table {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 13px;
+    box-shadow: 0 8px 30px rgba(12, 48, 76, 0.06);
+}
+
+    .jee-comparison-table thead th {
+        padding: 18px;
+        color: #ffffff;
+        background: #0b4f7e;
+        border-color: rgba(255, 255, 255, 0.15);
+        font-size: 14px;
+    }
+
+    .jee-comparison-table tbody th,
+    .jee-comparison-table tbody td {
+        padding: 17px;
+        color: #52697d;
+        font-size: 13px;
+        line-height: 1.8;
+        border-color: #e6edf4;
+    }
+
+    .jee-comparison-table tbody th {
+        min-width: 140px;
+        color: #143650;
+        font-weight: 800;
+    }
+
+.jee-small-note {
+    color: #718295;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* Roadmap */
+
+.jee-roadmap-card {
+    height: 100%;
+    padding: 27px 23px;
+    border: 1px solid #e3ebf3;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 26px rgba(12, 48, 76, 0.05);
+    transition: transform 0.25s ease;
+}
+
+    .jee-roadmap-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .jee-roadmap-card > span {
+        display: inline-block;
+        color: #0b679d;
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 1.4px;
+        margin-bottom: 18px;
+    }
+
+    .jee-roadmap-card h4 {
+        color: #143650;
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .jee-roadmap-card p {
+        color: #687b8c;
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 0;
+    }
+
+/* Career section */
+
+.jee-career-section {
+    padding: 80px 0;
+    background: #f2f7fc;
+}
+
+.jee-career-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.jee-career-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 78px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e1eaf3;
+    border-radius: 12px;
+}
+
+    .jee-career-item span {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        color: #0b659e;
+        background: #e7f2fa;
+        border-radius: 9px;
+        font-size: 11px;
+        font-weight: 850;
+    }
+
+    .jee-career-item strong {
+        color: #21425c;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+/* FAQ */
+
+.jee-faq {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    .jee-faq .accordion-item {
+        margin-bottom: 12px;
+        overflow: hidden;
+        border: 1px solid #e1eaf3;
+        border-radius: 12px;
+        box-shadow: 0 5px 17px rgba(12, 48, 76, 0.035);
+    }
+
+    .jee-faq .accordion-button {
+        padding: 21px;
+        color: #143650;
+        background: #ffffff;
+        font-size: 15px;
+        font-weight: 750;
+        box-shadow: none;
+    }
+
+        .jee-faq .accordion-button:not(.collapsed) {
+            color: #075b91;
+            background: #f1f7fc;
+        }
+
+    .jee-faq .accordion-body {
+        color: #617587;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+        .jee-faq .accordion-body a {
+            color: #075b91;
+            font-weight: 700;
+        }
+
+/* Enquiry CTA */
+
+.jee-enquiry-section {
+    padding: 78px 0;
+    color: #ffffff;
+    background: linear-gradient(125deg, #061f46, #075b91);
+}
+
+.jee-enquiry-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .jee-enquiry-content h2 {
+        color: #ffffff;
+        font-size: clamp(29px, 3.5vw, 42px);
+        font-weight: 850;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    .jee-enquiry-content p {
+        color: #dceaf7;
+        font-size: 15px;
+        line-height: 1.9;
+        margin-bottom: 27px;
+    }
+
+    .jee-enquiry-content .btn {
+        padding: 13px 24px;
+        color: #173650;
+        border-radius: 8px;
+        font-weight: 800;
+    }
+
+/* Responsive */
+
+@media (max-width: 991.98px) {
+    .jee-hero {
+        padding: 58px 0;
+    }
+
+    .jee-hero-visual img {
+        height: 340px;
+    }
+
+    .jee-floating-card {
+        right: 10px;
+    }
+
+    .jee-section,
+    .jee-audience-section,
+    .jee-comparison-section,
+    .jee-career-section {
+        padding: 62px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .jee-hero {
+        padding: 43px 0;
+    }
+
+        .jee-hero h1 {
+            font-size: 36px;
+            letter-spacing: -0.5px;
+        }
+
+    .jee-hero-description {
+        font-size: 14px;
+    }
+
+    .jee-hero-actions {
+        flex-direction: column;
+    }
+
+        .jee-hero-actions .btn {
+            width: 100%;
+        }
+
+    .jee-hero-points {
+        gap: 19px;
+    }
+
+    .jee-hero-visual img {
+        height: 270px;
+    }
+
+    .jee-floating-card {
+        right: 8px;
+        bottom: 18px;
+        padding: 14px;
+    }
+
+    .jee-section,
+    .jee-audience-section,
+    .jee-comparison-section,
+    .jee-career-section,
+    .jee-enquiry-section {
+        padding: 48px 0;
+    }
+
+    .jee-info-panel {
+        padding: 24px;
+    }
+
+    .jee-audience-grid,
+    .jee-career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jee-subject-top {
+        min-height: auto;
+    }
+
+    .jee-subject-content {
+        padding: 21px;
+    }
+
+    .jee-timeline-item {
+        gap: 14px;
+    }
+
+    .jee-timeline-number {
+        width: 47px;
+        height: 47px;
+    }
+
+    .jee-timeline-item:not(:last-child)::after {
+        left: 22px;
+    }
+
+    .jee-comparison-table thead th,
+    .jee-comparison-table tbody th,
+    .jee-comparison-table tbody td {
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .jee-faq .accordion-button {
+        padding: 17px;
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   NEET COURSE PAGE
+========================================== */
+.neet-hero {
+    padding: 72px 0;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(125deg, #082d50, #087b91);
+}
+
+.neet-eyebrow {
+    display: inline-block;
+    color: #ffe08a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 19px;
+}
+
+.neet-hero h1 {
+    max-width: 690px;
+    font-size: clamp(35px, 4.7vw, 56px);
+    font-weight: 850;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    margin-bottom: 22px;
+}
+
+    .neet-hero h1 span {
+        display: block;
+        color: #75e1d0;
+    }
+
+.neet-hero-description {
+    max-width: 600px;
+    color: #d9edf2;
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.neet-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+    .neet-hero-actions .btn {
+        padding: 13px 20px;
+        border-radius: 8px;
+        font-weight: 750;
+    }
+
+.neet-hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 37px;
+}
+
+    .neet-hero-highlights div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .neet-hero-highlights strong {
+        font-size: 16px;
+    }
+
+    .neet-hero-highlights span {
+        color: #c5e3e9;
+        font-size: 12px;
+    }
+
+.neet-hero-image {
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 21px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.2);
+}
+
+    .neet-hero-image img {
+        display: block;
+        width: 100%;
+        height: 385px;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+.neet-image-caption {
+    position: absolute;
+    right: 20px;
+    bottom: 22px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 17px;
+    color: #173c4d;
+    background: #fff;
+    border-left: 5px solid #49c9b4;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+    .neet-image-caption span {
+        color: #087b91;
+        font-size: 10px;
+        font-weight: 850;
+        letter-spacing: 1.3px;
+    }
+
+    .neet-image-caption strong {
+        font-size: 15px;
+    }
+
+/* General sections */
+
+.neet-section {
+    padding: 78px 0;
+}
+
+.neet-section-heading {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.neet-kicker {
+    display: inline-block;
+    color: #087b91;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 1.5px;
+    margin-bottom: 13px;
+}
+
+.neet-section-heading h2,
+.neet-audience-section h2,
+.neet-career-section h2 {
+    color: #153950;
+    font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 850;
+    line-height: 1.23;
+    margin-bottom: 16px;
+}
+
+.neet-section-heading p,
+.neet-audience-section p,
+.neet-career-section p {
+    color: #667b89;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+    .neet-section-heading p + p {
+        margin-top: 12px;
+    }
+
+/* Info cards */
+
+.neet-info-card {
+    height: 100%;
+    padding: 29px;
+    background: #fff;
+    border: 1px solid #e2edf0;
+    border-radius: 16px;
+    box-shadow: 0 9px 28px rgba(9, 55, 74, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .neet-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 17px 35px rgba(9, 55, 74, 0.11);
+    }
+
+.neet-card-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    background: #087b91;
+    border-radius: 13px;
+    font-weight: 850;
+    margin-bottom: 21px;
+}
+
+.neet-info-card h4 {
+    color: #153950;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.neet-info-card p {
+    color: #667b89;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+.neet-info-card .btn {
+    font-weight: 700;
+}
+
+/* Audience section */
+
+.neet-audience-section {
+    padding: 78px 0;
+    background: #f0f8f8;
+}
+
+.neet-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.neet-audience-card {
+    padding: 23px;
+    background: #fff;
+    border: 1px solid #dfecee;
+    border-radius: 15px;
+    transition: transform 0.25s ease;
+}
+
+    .neet-audience-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .neet-audience-card > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        background: #087b91;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 850;
+        margin-bottom: 15px;
+    }
+
+    .neet-audience-card h4 {
+        color: #153950;
+        font-size: 16px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .neet-audience-card p {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+/* Subject cards */
+
+.neet-subjects-section {
+    background: #fff;
+}
+
+.neet-subject-card {
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e0eaee;
+    border-radius: 17px;
+    box-shadow: 0 11px 32px rgba(9, 55, 74, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .neet-subject-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 19px 39px rgba(9, 55, 74, 0.12);
+    }
+
+.neet-subject-header {
+    min-height: 205px;
+    padding: 24px;
+    color: #fff;
+}
+
+.biology-header {
+    background: linear-gradient(135deg, #08745c, #21ae89);
+}
+
+.physics-header {
+    background: linear-gradient(135deg, #07547d, #159fc0);
+}
+
+.chemistry-header {
+    background: linear-gradient(135deg, #5c438f, #9477ce);
+}
+
+.neet-subject-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.neet-subject-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1.4px;
+    margin-bottom: 8px;
+}
+
+.neet-subject-header h3 {
+    font-size: 25px;
+    font-weight: 850;
+    margin-bottom: 8px;
+}
+
+.neet-subject-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.neet-subject-body {
+    padding: 24px;
+}
+
+    .neet-subject-body h5 {
+        color: #153950;
+        font-size: 15px;
+        font-weight: 850;
+        margin-bottom: 14px;
+    }
+
+    .neet-subject-body ul {
+        padding-left: 18px;
+        margin-bottom: 22px;
+    }
+
+    .neet-subject-body li {
+        padding: 5px 0;
+        color: #5d7280;
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+        .neet-subject-body li::marker {
+            color: #087b91;
+        }
+
+.neet-skill-box {
+    padding: 16px;
+    background: #eef8f7;
+    border-radius: 10px;
+}
+
+    .neet-skill-box strong {
+        color: #087b75;
+        font-size: 12px;
+    }
+
+    .neet-skill-box p {
+        color: #627b84;
+        font-size: 12px;
+        line-height: 1.8;
+        margin: 7px 0 0;
+    }
+
+.neet-syllabus-notice {
+    padding: 20px 22px;
+    color: #617582;
+    background: #f1f8fb;
+    border: 1px solid #dcebee;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+    .neet-syllabus-notice strong {
+        color: #153950;
+    }
+
+    .neet-syllabus-notice a {
+        display: block;
+        width: fit-content;
+        margin-top: 8px;
+        color: #08758a;
+        font-weight: 750;
+        text-decoration: none;
+    }
+
+        .neet-syllabus-notice a:hover {
+            text-decoration: underline;
+        }
+
+/* Learning timeline */
+
+.neet-learning-timeline {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.neet-timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding-bottom: 32px;
+}
+
+    .neet-timeline-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 55px;
+        bottom: 0;
+        left: 25px;
+        width: 2px;
+        background: #d9e9eb;
+    }
+
+.neet-timeline-number {
+    z-index: 1;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #fff;
+    background: #087b91;
+    border: 5px solid #e4f4f3;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.neet-timeline-item h4 {
+    color: #153950;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 7px 0 9px;
+}
+
+.neet-timeline-item p {
+    color: #667b89;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+/* Roadmap */
+
+.neet-roadmap-section {
+    padding: 78px 0;
+    background: #f0f8f8;
+}
+
+.neet-roadmap-card {
+    height: 100%;
+    padding: 25px 22px;
+    background: #fff;
+    border: 1px solid #deebed;
+    border-radius: 15px;
+    box-shadow: 0 7px 24px rgba(9, 55, 74, 0.04);
+    transition: transform 0.25s ease;
+}
+
+    .neet-roadmap-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .neet-roadmap-card > span {
+        display: inline-block;
+        color: #087b91;
+        font-size: 10px;
+        font-weight: 850;
+        letter-spacing: 1.4px;
+        margin-bottom: 17px;
+    }
+
+    .neet-roadmap-card h4 {
+        color: #153950;
+        font-size: 17px;
+        font-weight: 800;
+        margin-bottom: 11px;
+    }
+
+    .neet-roadmap-card p {
+        color: #667b89;
+        font-size: 12px;
+        line-height: 1.9;
+        margin-bottom: 0;
+    }
+
+/* Career options */
+
+.neet-career-section {
+    padding: 78px 0;
+    background: #fff;
+}
+
+.neet-career-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.neet-career-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 75px;
+    padding: 15px;
+    background: #f1f8f8;
+    border: 1px solid #deebed;
+    border-radius: 12px;
+}
+
+    .neet-career-item span {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        color: #087b91;
+        background: #dcefee;
+        border-radius: 9px;
+        font-size: 11px;
+        font-weight: 850;
+    }
+
+    .neet-career-item strong {
+        color: #244b5d;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+/* FAQ */
+
+.neet-faq-section {
+    background: #f6fafb;
+}
+
+.neet-faq {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    .neet-faq .accordion-item {
+        overflow: hidden;
+        margin-bottom: 12px;
+        border: 1px solid #dfebed;
+        border-radius: 12px;
+        box-shadow: 0 5px 18px rgba(9, 55, 74, 0.035);
+    }
+
+    .neet-faq .accordion-button {
+        padding: 20px;
+        color: #153950;
+        background: #fff;
+        font-size: 14px;
+        font-weight: 750;
+        box-shadow: none;
+    }
+
+        .neet-faq .accordion-button:not(.collapsed) {
+            color: #087b91;
+            background: #edf8f7;
+        }
+
+    .neet-faq .accordion-body {
+        color: #617582;
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+        .neet-faq .accordion-body a {
+            color: #08758a;
+            font-weight: 750;
+        }
+
+/* Enquiry section */
+
+.neet-enquiry-section {
+    padding: 76px 0;
+    color: #fff;
+    background: linear-gradient(125deg, #082d50, #087b91);
+}
+
+.neet-enquiry-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .neet-enquiry-content h2 {
+        color: #fff;
+        font-size: clamp(28px, 3.5vw, 41px);
+        font-weight: 850;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    .neet-enquiry-content p {
+        color: #d9edf2;
+        font-size: 14px;
+        line-height: 1.9;
+        margin-bottom: 26px;
+    }
+
+    .neet-enquiry-content .btn {
+        padding: 13px 23px;
+        color: #153950;
+        border-radius: 8px;
+        font-weight: 800;
+    }
+
+/* Responsive */
+
+@media (max-width: 991.98px) {
+    .neet-hero {
+        padding: 56px 0;
+    }
+
+    .neet-hero-image img {
+        height: 330px;
+    }
+
+    .neet-section,
+    .neet-audience-section,
+    .neet-roadmap-section,
+    .neet-career-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .neet-hero {
+        padding: 42px 0;
+    }
+
+        .neet-hero h1 {
+            font-size: 35px;
+            letter-spacing: -0.5px;
+        }
+
+    .neet-hero-actions {
+        flex-direction: column;
+    }
+
+        .neet-hero-actions .btn {
+            width: 100%;
+        }
+
+    .neet-hero-highlights {
+        gap: 17px;
+    }
+
+    .neet-hero-image img {
+        height: 270px;
+    }
+
+    .neet-section,
+    .neet-audience-section,
+    .neet-roadmap-section,
+    .neet-career-section,
+    .neet-enquiry-section {
+        padding: 47px 0;
+    }
+
+    .neet-audience-grid,
+    .neet-career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .neet-subject-header {
+        min-height: auto;
+    }
+
+    .neet-subject-body {
+        padding: 21px;
+    }
+
+    .neet-timeline-item {
+        gap: 14px;
+    }
+
+    .neet-timeline-number {
+        width: 46px;
+        height: 46px;
+    }
+
+    .neet-timeline-item:not(:last-child)::after {
+        left: 22px;
+    }
+
+    .neet-faq .accordion-button {
+        padding: 16px;
+        font-size: 13px;
+    }
+
+    /* =========================================
+   BOARD EXAM PAGE - BLUE THEME
+   ========================================= */
+    .board-page {
+        --board-primary: #1769aa;
+        --board-primary-dark: #123b65;
+        --board-primary-light: #eaf3fc;
+        --board-accent: #36a4d8;
+        --board-text: #19324d;
+        --board-muted: #68798b;
+        background: #fff;
+        color: var(--board-text);
+    }
+
+        .board-page .board-hero {
+            background: linear-gradient(120deg, #edf5ff 0%, #f7fbff 55%, #e8f6fc 100%);
+        }
+
+            .board-page .board-label,
+            .board-page .board-hero h1 span,
+            .board-page .board-heading h2 span,
+            .board-page .board-tips-title span {
+                color: var(--board-primary);
+            }
+
+            .board-page .board-hero h1,
+            .board-page .board-heading h2,
+            .board-page .board-tips-title,
+            .board-page .board-feature-card h4,
+            .board-page .board-program-content h3,
+            .board-page .board-subject-card h4,
+            .board-page .board-roadmap-item h4,
+            .board-page .board-tip-item h5 {
+                color: var(--board-text);
+            }
+
+        .board-page .board-main-btn {
+            background: var(--board-primary);
+            border-color: var(--board-primary);
+            color: #fff;
+        }
+
+            .board-page .board-main-btn:hover {
+                background: var(--board-primary-dark);
+                border-color: var(--board-primary-dark);
+                color: #fff;
+            }
+
+        .board-page .board-light-btn {
+            border-color: #c8d9eb;
+            color: var(--board-primary-dark);
+        }
+
+            .board-page .board-light-btn:hover {
+                background: var(--board-primary-dark);
+                border-color: var(--board-primary-dark);
+                color: #fff;
+            }
+
+        .board-page .board-hero-highlights i {
+            color: var(--board-primary);
+        }
+
+        .board-page .board-hero-image-wrap {
+            border-color: #dce9f6;
+            box-shadow: 0 15px 40px rgba(24, 82, 135, .12);
+        }
+
+        .board-page .board-note-icon,
+        .board-page .board-feature-icon,
+        .board-page .board-subject-icon {
+            background: var(--board-primary-light);
+            color: var(--board-primary);
+        }
+
+        .board-page .board-section-muted {
+            background: #f3f7fc;
+        }
+
+        .board-page .board-feature-card,
+        .board-page .board-program-card,
+        .board-page .board-subject-card,
+        .board-page .board-tip-item {
+            border-color: #e0eaf5;
+        }
+
+            .board-page .board-feature-card:hover,
+            .board-page .board-subject-card:hover,
+            .board-page .board-program-card:hover {
+                border-color: #b8d6f2;
+                box-shadow: 0 13px 28px rgba(26, 78, 125, .10);
+            }
+
+        .board-page .board-program-banner,
+        .board-page .board-banner-one,
+        .board-page .board-banner-two {
+            background: linear-gradient(120deg, #e7f1ff, #eaf7fc);
+        }
+
+            .board-page .board-program-banner i {
+                color: var(--board-primary);
+            }
+
+        .board-page .board-program-content li::marker {
+            color: var(--board-primary);
+        }
+
+        .board-page .board-text-link {
+            color: var(--board-primary);
+        }
+
+            .board-page .board-text-link:hover {
+                color: var(--board-primary-dark);
+            }
+
+        .board-page .board-subject-card > span {
+            background: var(--board-primary-light);
+            color: var(--board-primary-dark);
+        }
+
+        .board-page .board-roadmap::before {
+            background: #c7def4;
+        }
+
+        .board-page .board-roadmap-number {
+            background: var(--board-primary);
+            border-color: #e1efff;
+        }
+
+        .board-page .board-roadmap-item > div:last-child {
+            border-color: #e0eaf5;
+        }
+
+        .board-page .board-tip-item > i {
+            color: var(--board-primary);
+        }
+
+        .board-page .board-resources-box {
+            background: linear-gradient(120deg, #edf5ff, #f4faff);
+            border-color: #d8e7f6;
+        }
+
+        .board-page .board-faq .accordion-item {
+            border-color: #e0eaf5;
+        }
+
+        .board-page .board-faq .accordion-button:not(.collapsed) {
+            background: #edf5ff;
+            color: var(--board-primary-dark);
+        }
+
+        .board-page .board-final-card {
+            background: linear-gradient(115deg, #123b65, #1769aa);
+        }
+
+            .board-page .board-final-card > div > span {
+                color: #c7e6ff;
+            }
+
+        .board-page .board-final-btn:hover {
+            background: #e6f2ff;
+            border-color: #e6f2ff;
+            color: var(--board-primary-dark);
+        }
+}
+
+/* ================================
+   COURSES PAGE
+================================ */
+.courses-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #102b50 url('/images/classroom-teaching.jpg') center/cover no-repeat;
+    padding: 100px 0 85px;
+    color: #fff;
+}
+
+.courses-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient( 100deg, rgba(8, 29, 58, .96), rgba(12, 44, 81, .85) );
+}
+
+.courses-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.courses-eyebrow {
+    display: inline-block;
+    padding: 9px 17px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .12);
+    color: #ffcf33;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.courses-hero h1 {
+    max-width: 950px;
+    margin-top: 25px;
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+    .courses-hero h1 span {
+        display: block;
+        color: #ffca28;
+    }
+
+.courses-hero-content > p {
+    max-width: 760px;
+    margin-top: 24px;
+    color: #e1eaf5;
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.courses-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+    .courses-hero-buttons .btn {
+        border-radius: 9px;
+        padding: 13px 23px;
+        font-weight: 700;
+    }
+
+.courses-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 55px;
+}
+
+    .courses-hero-stats > div {
+        min-width: 180px;
+        padding: 5px 26px;
+        border-left: 2px solid rgba(255, 202, 40, .7);
+    }
+
+        .courses-hero-stats > div:first-child {
+            padding-left: 0;
+            border-left: 0;
+        }
+
+    .courses-hero-stats strong,
+    .courses-hero-stats span {
+        display: block;
+    }
+
+    .courses-hero-stats strong {
+        color: #ffcf33;
+        font-size: 21px;
+        font-weight: 800;
+    }
+
+    .courses-hero-stats span {
+        margin-top: 5px;
+        color: #e1eaf5;
+        font-size: 13px;
+    }
+
+/* INTRODUCTION */
+
+.courses-intro-section {
+    padding: 75px 0 55px;
+    background: #fff;
+}
+
+.courses-section-heading {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.courses-kicker {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #1d5da8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.courses-section-heading h2 {
+    color: #142f53;
+    font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.courses-section-heading > p {
+    margin-top: 16px;
+    color: #637187;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.courses-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+    .courses-quick-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 12px 18px;
+        border: 1px solid #dce6f2;
+        border-radius: 8px;
+        background: #f7faff;
+        color: #183b66;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: .25s ease;
+    }
+
+        .courses-quick-links a:hover {
+            border-color: #1d5da8;
+            background: #eaf3ff;
+            transform: translateY(-3px);
+        }
+
+/* COURSE CARDS */
+
+.courses-list-section {
+    padding: 75px 0 90px;
+    background: #f4f7fb;
+}
+
+.course-card {
+    overflow: hidden;
+    border: 1px solid #e3eaf3;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(21, 46, 78, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+    .course-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 38px rgba(21, 46, 78, .12);
+    }
+
+.course-card-image {
+    position: relative;
+    height: 225px;
+    overflow: hidden;
+    background: #e6edf6;
+}
+
+    .course-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .4s ease;
+    }
+
+.course-card:hover .course-card-image img {
+    transform: scale(1.045);
+}
+
+.course-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: #ffca28;
+    color: #142f53;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.course-card-body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 225px);
+    padding: 25px;
+}
+
+.course-card-icon {
+    display: grid;
+    width: 49px;
+    height: 49px;
+    margin-bottom: 17px;
+    place-items: center;
+    border-radius: 12px;
+    background: #eaf2ff;
+    color: #1d5da8;
+    font-size: 23px;
+}
+
+.course-card-body h3 {
+    margin-bottom: 12px;
+    color: #142f53;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.course-card-body > p {
+    color: #637187;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.course-card-body h4 {
+    margin-top: 12px;
+    color: #1d5da8;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+.course-card-body ul {
+    display: grid;
+    gap: 11px;
+    margin: 15px 0 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.course-card-body li {
+    position: relative;
+    padding-left: 25px;
+    color: #4c5c72;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+    .course-card-body li::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #1d8a64;
+        content: "\2713";
+        font-weight: 800;
+    }
+
+.course-card-footer {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+    .course-card-footer .btn {
+        width: 100%;
+        padding: 11px 15px;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+/* LEARNING APPROACH */
+
+.courses-approach-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.approach-card {
+    position: relative;
+    padding: 30px 24px;
+    border: 1px solid #e1e9f3;
+    border-radius: 13px;
+    background: #fff;
+    transition: .25s ease;
+}
+
+    .approach-card:hover {
+        border-color: #a9c9f2;
+        box-shadow: 0 12px 30px rgba(21, 46, 78, .08);
+        transform: translateY(-4px);
+    }
+
+    .approach-card > span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #c6d5e7;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    .approach-card > i {
+        display: block;
+        margin-bottom: 20px;
+        color: #1d5da8;
+        font-size: 32px;
+    }
+
+    .approach-card h3 {
+        color: #142f53;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .approach-card p {
+        margin-bottom: 0;
+        color: #637187;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+/* ENQUIRY CTA */
+
+.courses-enquiry-section {
+    padding: 80px 0;
+    background: #102b50;
+}
+
+.courses-enquiry-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .courses-enquiry-content h2 {
+        margin-top: 20px;
+        color: #fff;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 800;
+    }
+
+    .courses-enquiry-content p {
+        margin: 20px auto 28px;
+        color: #dce7f5;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .courses-enquiry-content .btn {
+        border-radius: 8px;
+        padding: 13px 24px;
+        font-weight: 800;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 767.98px) {
+    .courses-hero {
+        padding: 75px 0 60px;
+    }
+
+        .courses-hero h1 {
+            letter-spacing: -.7px;
+        }
+
+    .courses-hero-content > p {
+        font-size: 15px;
+    }
+
+    .courses-hero-stats {
+        gap: 20px 0;
+        margin-top: 38px;
+    }
+
+        .courses-hero-stats > div {
+            min-width: 50%;
+            padding: 5px 12px;
+        }
+
+            .courses-hero-stats > div:nth-child(odd) {
+                padding-left: 0;
+                border-left: 0;
+            }
+
+    .courses-intro-section,
+    .courses-list-section,
+    .courses-approach-section {
+        padding: 55px 0;
+    }
+
+    .courses-quick-links a {
+        justify-content: center;
+        flex: 1 1 145px;
+    }
+
+    .course-card-image {
+        height: 210px;
+    }
+
+    .course-card-body {
+        padding: 21px;
+    }
+
+}
+
+
+
+/* ==========================================
+   REVOLUTION SCIENCE ACADEMY
+   FACULTY PAGE - COMPLETE BLUE THEME
+========================================== */
+/* HERO SECTION */
+.faculty-hero {
+    position: relative;
+    min-height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 75px 20px;
+    text-align: center;
+    background: linear-gradient( 110deg, rgba(7, 27, 73, 0.90), rgba(18, 62, 122, 0.82), rgba(37, 91, 158, 0.72) ), url('/images/others/group1.jpg') center 40% / cover no-repeat;
+}
+
+.faculty-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+    .faculty-hero-content h1 {
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+        .faculty-hero-content h1 span {
+            color: #93c5fd;
+        }
+
+    .faculty-hero-content p {
+        max-width: 760px;
+        margin: 22px auto 0;
+        color: #edf5ff;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+
+/* FACULTY SECTION */
+
+.faculty-section {
+    padding: 80px 0;
+    background: #eaf4ff;
+}
+
+.faculty-heading {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+    .faculty-heading h2 {
+        margin-bottom: 15px;
+        color: #0b2454;
+        font-size: clamp(28px, 4vw, 39px);
+        font-weight: 800;
+        line-height: 1.3;
+    }
+
+        .faculty-heading h2 span {
+            color: #2563a9;
+        }
+
+    .faculty-heading p {
+        margin: 0;
+        color: #425b7d;
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+
+/* FACULTY CARD */
+
+.faculty-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #d8e5f5;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(7, 27, 73, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .faculty-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 17px 35px rgba(7, 27, 73, 0.16);
+    }
+
+
+/* FACULTY PHOTO */
+
+.faculty-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 245px;
+    padding: 22px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #dceaff, #f3f8ff);
+}
+
+    .faculty-image img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+        border: 4px solid #ffffff;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        background: #ffffff;
+        box-shadow: 0 7px 18px rgba(7, 27, 73, 0.15);
+        transition: transform 0.3s ease;
+    }
+
+.faculty-card:hover .faculty-image img {
+    transform: scale(1.04);
+}
+
+
+/* FACULTY DETAILS */
+
+.faculty-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px 20px;
+}
+
+.faculty-name {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 23px;
+}
+
+    .faculty-name > i {
+        flex-shrink: 0;
+        margin-top: 3px;
+        color: #174b8c;
+        font-size: 23px;
+    }
+
+    .faculty-name h3 {
+        margin: 0 0 6px;
+        color: #0b2454;
+        font-size: 19px;
+        font-weight: 800;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .faculty-name span {
+        display: block;
+        color: #2563a9;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+.faculty-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+    .faculty-detail > i {
+        flex-shrink: 0;
+        margin-top: 3px;
+        color: #174b8c;
+        font-size: 17px;
+    }
+
+    .faculty-detail p {
+        margin: 0;
+        color: #425b7d;
+        font-size: 13px;
+        line-height: 1.75;
+        overflow-wrap: anywhere;
+    }
+
+
+/* ACHIEVEMENTS */
+
+.faculty-achievements {
+    margin-top: auto;
+    padding-top: 19px;
+    border-top: 1px solid #dce6f3;
+}
+
+    .faculty-achievements h4 {
+        margin-bottom: 13px;
+        color: #174b8c;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .faculty-achievements ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .faculty-achievements li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        color: #425b7d;
+        font-size: 13px;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+
+        .faculty-achievements li::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #2563a9;
+            font-size: 14px;
+            content: "★";
+        }
+
+
+/* TEACHING PHILOSOPHY SECTION */
+
+.faculty-philosophy {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+    background: linear-gradient( 120deg, rgba(7, 27, 73, 0.95), rgba(18, 62, 122, 0.91), rgba(37, 91, 158, 0.88) ), url('/images/others/group1.jpeg') center / cover no-repeat;
+}
+
+    .faculty-philosophy .faculty-heading h2 {
+        color: #ffffff;
+    }
+
+        .faculty-philosophy .faculty-heading h2 span {
+            color: #93c5fd;
+        }
+
+    .faculty-philosophy .faculty-heading p {
+        color: #e1ecff;
+    }
+
+
+/* PHILOSOPHY CARDS */
+
+.philosophy-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    min-height: 230px;
+    padding: 35px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.96);
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .philosophy-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.20);
+    }
+
+.philosophy-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: #174b8c;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.philosophy-card h3 {
+    margin-bottom: 13px;
+    color: #0b2454;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.philosophy-card p {
+    margin: 0;
+    color: #425b7d;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 991px) {
+    .faculty-section,
+    .faculty-philosophy {
+        padding: 65px 0;
+    }
+
+    .faculty-heading {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .faculty-hero {
+        min-height: 300px;
+        padding: 55px 18px;
+        background-position: center;
+    }
+
+    .faculty-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .faculty-hero-content p {
+        margin-top: 16px;
+        font-size: 16px;
+    }
+
+    .faculty-section,
+    .faculty-philosophy {
+        padding: 55px 0;
+    }
+
+    .faculty-heading {
+        margin-bottom: 32px;
+    }
+
+        .faculty-heading p {
+            font-size: 15px;
+        }
+
+    .faculty-image {
+        min-height: 225px;
+    }
+
+        .faculty-image img {
+            width: 185px;
+            height: 185px;
+        }
+
+    .faculty-content {
+        padding: 22px 18px;
+    }
+
+    .philosophy-card {
+        min-height: 200px;
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .faculty-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .faculty-image img {
+        width: 165px;
+        height: 165px;
+    }
+}
+
+
+/* Register Button */
+.register-btn {
+    background: #174b8c;
+    color: #fff;
+    border: 1px solid #174b8c;
+    border-radius: 7px;
+    padding: 9px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+    .register-btn:hover {
+        background: #0b2e61;
+        border-color: #0b2e61;
+        color: #fff;
+        transform: translateY(-1px);
+    }
+
+/* Registration Popup */
+.register-modal {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(7, 27, 73, 0.2);
+}
+
+.register-modal-header {
+    background: linear-gradient(135deg, #071b49, #2563a9);
+    color: #fff;
+    padding: 22px 26px;
+    border-bottom: none;
+}
+
+.register-modal .modal-body {
+    background: #fff;
+}
+
+.register-modal .form-label {
+    color: #17345f;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.register-modal .form-control,
+.register-modal .form-select {
+    min-height: 45px;
+    border: 1px solid #d6e0ee;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.register-modal textarea.form-control {
+    min-height: 90px;
+}
+
+.register-modal .form-control:focus,
+.register-modal .form-select:focus {
+    border-color: #2563a9;
+    box-shadow: 0 0 0 3px rgba(37, 99, 169, 0.12);
+}
+
+.register-modal-footer {
+    padding: 16px 24px;
+    background: #f5f8fd;
+    border-top: 1px solid #e5edf7;
+}
+
+.register-submit-btn {
+    background: #174b8c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-weight: 600;
+}
+
+    .register-submit-btn:hover {
+        background: #0b2e61;
+        color: #fff;
+    }
+
+@media (max-width: 576px) {
+    .register-modal-header {
+        padding: 18px;
+    }
+
+    .register-modal .modal-body {
+        padding: 20px !important;
+    }
+
+    .register-modal-footer {
+        padding: 14px;
+        flex-wrap: wrap;
+    }
+
+    .register-submit-btn {
+        width: 100%;
+    }
+}
+/*----------------------------------------------------------------*/
+
+
+/* =========================================
+   REVOLUTION SCIENCE ACADEMY - EVENTS PAGE
+========================================= */
+
+.rsa-events-page {
+    --rsa-event-blue: #1259a7;
+    --rsa-event-dark: #082b55;
+    --rsa-event-light: #eef6ff;
+    --rsa-event-text: #20344b;
+    color: var(--rsa-event-text);
+    overflow: hidden;
+    background: #fff;
+}
+
+    .rsa-events-page *,
+    .rsa-events-page *::before,
+    .rsa-events-page *::after {
+        box-sizing: border-box;
+    }
+
+.rsa-events-hero {
+    min-height: 480px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+    background-color: #082b55;
+    background-image: url('/images/events/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rsa-events-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient( 90deg, rgba(4, 31, 66, 0.94) 0%, rgba(8, 51, 100, 0.82) 48%, rgba(9, 62, 117, 0.42) 100% );
+}
+
+.rsa-events-hero-content {
+    position: relative;
+    padding-top: 85px;
+    padding-bottom: 95px;
+    color: #fff;
+}
+
+.rsa-events-eyebrow {
+    display: inline-block;
+    color: #d7e9ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.rsa-events-hero h1 {
+    max-width: 750px;
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.rsa-events-hero p {
+    max-width: 620px;
+    margin: 0 0 30px;
+    color: #e3edfa;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.rsa-events-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 13px 24px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    background: #fff;
+    color: #104f96;
+    font-weight: 750;
+    transition: all 0.25s ease;
+}
+
+    .rsa-events-primary-btn:hover {
+        background: #dcecff;
+        border-color: #dcecff;
+        color: #082b55;
+        transform: translateY(-2px);
+    }
+
+.rsa-events-hero-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 7px;
+    background: linear-gradient(90deg, #7ebaff, #fff, #7ebaff);
+}
+
+.rsa-events-intro {
+    padding: 75px 0;
+    background: #fff;
+}
+
+.rsa-events-section-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #1764b3;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.rsa-events-intro h2,
+.rsa-events-heading h2,
+.rsa-events-cta h2 {
+    margin: 0 0 18px;
+    color: #0a2d54;
+    font-size: clamp(28px, 3.3vw, 39px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.rsa-events-intro p,
+.rsa-events-heading p,
+.rsa-events-cta p {
+    color: #68798c;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.rsa-events-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px;
+    height: 100%;
+    border: 1px solid #dceaff;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f5f9ff, #eaf3ff);
+}
+
+.rsa-events-highlight-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #145ca8;
+    color: #fff;
+    font-size: 23px;
+}
+
+.rsa-events-highlight h3 {
+    margin: 2px 0 9px;
+    color: #0a2d54;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.rsa-events-highlight p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.rsa-events-gallery-section {
+    padding: 80px 0 90px;
+    background: #f5f8fc;
+}
+
+.rsa-events-heading {
+    max-width: 720px;
+    margin: 0 auto 34px;
+}
+
+    .rsa-events-heading p {
+        margin-bottom: 0;
+    }
+
+.rsa-events-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 38px;
+}
+
+.rsa-event-filter {
+    padding: 11px 23px;
+    border: 1px solid #d5e1ef;
+    border-radius: 30px;
+    background: #fff;
+    color: #244563;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .rsa-event-filter:hover,
+    .rsa-event-filter.active {
+        border-color: #1259a7;
+        background: #1259a7;
+        color: #fff;
+        box-shadow: 0 5px 16px rgba(18, 89, 167, 0.18);
+    }
+
+.rsa-event-item {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+    .rsa-event-item.d-none {
+        display: none !important;
+    }
+
+.rsa-event-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e5ebf3;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgba(18, 46, 79, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .rsa-event-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 35px rgba(18, 46, 79, 0.13);
+    }
+
+.rsa-event-image-button {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 245px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #dce8f5;
+    cursor: pointer;
+    text-align: left;
+}
+
+    .rsa-event-image-button img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+    }
+
+.rsa-event-card:hover .rsa-event-image-button img {
+    transform: scale(1.06);
+}
+
+.rsa-event-image-zoom {
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 5px;
+    background: rgba(5, 35, 70, 0.83);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.25s ease;
+}
+
+.rsa-event-card:hover .rsa-event-image-zoom,
+.rsa-event-image-button:focus-visible .rsa-event-image-zoom {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rsa-event-card-content {
+    padding: 23px 22px 25px;
+}
+
+.rsa-event-category {
+    display: inline-block;
+    padding: 6px 11px;
+    margin-bottom: 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+    .rsa-event-category.academic {
+        background: #e4efff;
+        color: #1457a2;
+    }
+
+    .rsa-event-category.cultural {
+        background: #eee8ff;
+        color: #6944a6;
+    }
+
+    .rsa-event-category.motivation {
+        background: #e1f5ee;
+        color: #167555;
+    }
+
+.rsa-event-card-content h3 {
+    margin: 0 0 10px;
+    color: #0a2d54;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.rsa-event-card-content p {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.rsa-events-cta {
+    padding: 75px 0;
+    background: #fff;
+}
+
+.rsa-events-cta-inner {
+    padding: 55px 25px;
+    border: 1px solid #d8e8fb;
+    border-radius: 15px;
+    background: linear-gradient(125deg, #edf5ff, #f9fbff);
+    text-align: center;
+}
+
+    .rsa-events-cta-inner p {
+        max-width: 650px;
+        margin: 0 auto 25px;
+    }
+
+    .rsa-events-cta-inner .rsa-events-primary-btn {
+        border-color: #1259a7;
+        background: #1259a7;
+        color: #fff;
+    }
+
+        .rsa-events-cta-inner .rsa-events-primary-btn:hover {
+            border-color: #082b55;
+            background: #082b55;
+        }
+
+.rsa-event-modal .modal-content {
+    overflow: hidden;
+    border: 0;
+    border-radius: 12px;
+}
+
+.rsa-event-modal .modal-header {
+    border-bottom: 1px solid #e7edf5;
+    background: #f5f9ff;
+}
+
+.rsa-event-modal .modal-title {
+    color: #0a2d54;
+    font-weight: 800;
+}
+
+.rsa-event-modal .modal-body {
+    padding: 0;
+    background: #071d35;
+    text-align: center;
+}
+
+    .rsa-event-modal .modal-body img {
+        display: block;
+        width: 100%;
+        max-height: 78vh;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+@media (max-width: 767.98px) {
+    .rsa-events-hero {
+        min-height: 400px;
+        background-position: center;
+    }
+
+    .rsa-events-hero-content {
+        padding-top: 65px;
+        padding-bottom: 75px;
+    }
+
+    .rsa-events-hero h1 {
+        letter-spacing: -0.6px;
+    }
+
+    .rsa-events-hero p {
+        font-size: 15px;
+    }
+
+    .rsa-events-intro,
+    .rsa-events-gallery-section,
+    .rsa-events-cta {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .rsa-events-highlight {
+        padding: 22px;
+    }
+
+    .rsa-events-filters {
+        gap: 8px;
+    }
+
+    .rsa-event-filter {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+
+    .rsa-event-image-button {
+        height: 220px;
+    }
+
+    .rsa-event-image-zoom {
+        opacity: 1;
+        transform: none;
+    }
+
+    .rsa-events-cta-inner {
+        padding: 38px 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rsa-events-page *,
+    .rsa-events-page *::before,
+    .rsa-events-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+/* =========================================
+   REVOLUTION SCIENCE ACADEMY CONTACT PAGE
+========================================= */
+
+.rsa-contact-page {
+    --contact-blue: #1259a7;
+    --contact-dark: #082b55;
+    --contact-text: #23384f;
+    color: var(--contact-text);
+    background: #fff;
+}
+
+.rsa-contact-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 390px;
+    overflow: hidden;
+    background-color: #082b55;
+    background-image: url('/images/events/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rsa-contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient( 110deg, rgba(5, 35, 72, .96), rgba(9, 60, 116, .82), rgba(8, 44, 87, .57) );
+}
+
+.rsa-contact-hero-content {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    color: #fff;
+    text-align: center;
+}
+
+.rsa-contact-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #2672bd;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.rsa-contact-hero .rsa-contact-kicker {
+    color: #d9eaff;
+}
+
+.rsa-contact-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+    .rsa-contact-hero h1 span {
+        color: #9ccaff;
+    }
+
+.rsa-contact-hero p {
+    max-width: 650px;
+    margin: 20px auto 27px;
+    color: #e5effb;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.rsa-contact-hero-btn,
+.rsa-contact-submit,
+.rsa-contact-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 23px;
+    border-radius: 6px;
+    font-weight: 750;
+    transition: .25s ease;
+}
+
+.rsa-contact-hero-btn {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #104f96;
+}
+
+    .rsa-contact-hero-btn:hover {
+        background: #dcecff;
+        color: #082b55;
+        transform: translateY(-2px);
+    }
+
+.rsa-contact-main {
+    padding: 75px 0;
+}
+
+.rsa-contact-heading {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+    .rsa-contact-heading h2 {
+        margin: 0 0 15px;
+        color: #0a2d54;
+        font-size: clamp(28px, 3.4vw, 39px);
+        font-weight: 800;
+    }
+
+    .rsa-contact-heading p {
+        margin: 0;
+        color: #718096;
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+.rsa-contact-info-panel {
+    height: 100%;
+    padding: 35px 30px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #0a315f, #1259a7);
+    color: #fff;
+    box-shadow: 0 12px 35px rgba(8, 43, 85, .13);
+}
+
+.rsa-contact-info-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #b8d8ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.rsa-contact-info-panel h3 {
+    margin: 0 0 13px;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.rsa-contact-info-intro {
+    margin-bottom: 30px;
+    color: #dceaff;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.rsa-contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.rsa-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 9px;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+}
+
+    .rsa-contact-icon svg {
+        width: 23px;
+        height: 23px;
+    }
+
+.rsa-contact-info-item h4 {
+    margin: 1px 0 7px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.rsa-contact-info-item p {
+    margin: 0 0 4px;
+    color: #e0ecfc;
+    font-size: 13px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.rsa-contact-small-note {
+    color: #b8d8ff !important;
+}
+
+.rsa-contact-form-panel {
+    height: 100%;
+    padding: 35px;
+    border: 1px solid #e1eaf5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(20, 54, 91, .07);
+}
+
+    .rsa-contact-form-panel h3 {
+        margin: 0 0 10px;
+        color: #0a2d54;
+        font-size: 27px;
+        font-weight: 800;
+    }
+
+.rsa-contact-form-description {
+    margin-bottom: 27px;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.rsa-contact-form-panel .form-label {
+    margin-bottom: 8px;
+    color: #243b53;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.rsa-contact-input {
+    min-height: 48px;
+    border: 1px solid #dce5f0;
+    border-radius: 6px;
+    background: #fbfdff;
+    color: #243b53;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+    .rsa-contact-input:focus {
+        border-color: #4389d2;
+        background: #fff;
+        box-shadow: 0 0 0 .2rem rgba(18, 89, 167, .11);
+    }
+
+textarea.rsa-contact-input {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.rsa-contact-submit {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #1259a7;
+    background: #1259a7;
+    color: #fff;
+}
+
+    .rsa-contact-submit:hover {
+        border-color: #082b55;
+        background: #082b55;
+        color: #fff;
+    }
+
+.rsa-contact-map-section {
+    padding: 70px 0 80px;
+    background: #f4f8fd;
+}
+
+.rsa-contact-map {
+    height: 390px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 12px;
+    background: #e1eaf5;
+    box-shadow: 0 10px 32px rgba(20, 54, 91, .1);
+}
+
+    .rsa-contact-map iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+.rsa-contact-cta {
+    padding: 65px 0;
+    background: #fff;
+}
+
+.rsa-contact-cta-inner {
+    padding: 48px 25px;
+    border: 1px solid #d8e8fb;
+    border-radius: 13px;
+    background: linear-gradient(125deg, #edf5ff, #f8fbff);
+    text-align: center;
+}
+
+.rsa-contact-cta h2 {
+    margin-bottom: 13px;
+    color: #0a2d54;
+    font-size: clamp(25px, 3vw, 35px);
+    font-weight: 800;
+}
+
+.rsa-contact-cta p {
+    max-width: 650px;
+    margin: 0 auto 23px;
+    color: #68798c;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.rsa-contact-cta-btn {
+    border: 1px solid #1259a7;
+    background: #1259a7;
+    color: #fff;
+}
+
+    .rsa-contact-cta-btn:hover {
+        border-color: #082b55;
+        background: #082b55;
+        color: #fff;
+    }
+
+@media (max-width: 767.98px) {
+    .rsa-contact-hero {
+        min-height: 340px;
+    }
+
+    .rsa-contact-hero-content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .rsa-contact-main,
+    .rsa-contact-map-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .rsa-contact-info-panel,
+    .rsa-contact-form-panel {
+        padding: 25px 20px;
+    }
+
+    .rsa-contact-map {
+        height: 300px;
+    }
+
+    .rsa-contact-cta {
+        padding: 45px 0;
+    }
+
+    .rsa-contact-cta-inner {
+        padding: 35px 18px;
+    }
+}
+/*------------------------------------------------------------------------------------------------------*/
+
+
+/* Floating WhatsApp Button */
+.rsa-whatsapp-float {
+    position: fixed;
+    left: 16px;
+    bottom: 24px;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 17px 8px 9px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22);
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .rsa-whatsapp-float:hover {
+        background: #1ebe5d;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .rsa-whatsapp-float i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        background: #fff;
+        color: #25D366;
+        border-radius: 50%;
+        font-size: 27px;
+    }
+
+.rsa-whatsapp-label {
+    white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+    .rsa-whatsapp-float {
+        left: 12px;
+        bottom: 16px;
+        gap: 7px;
+        padding: 6px 13px 6px 7px;
+        font-size: 13px;
+    }
+
+        .rsa-whatsapp-float i {
+            width: 34px;
+            height: 34px;
+            font-size: 24px;
+        }
+}
+/*-------------------------------------------------------------------------*/
+
+/* STUDENT REGISTRATION PAGE */
+
+.rsa-register-section {
+    background: #f2f6fc;
+    min-height: 80vh;
+}
+
+.rsa-register-info {
+    padding: 20px 10px;
+}
+
+.rsa-register-badge {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 30px;
+    background: #e1ecff;
+    color: #205fba;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.rsa-register-info h1 {
+    color: #173457;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+    .rsa-register-info h1 span {
+        color: #2869c7;
+    }
+
+.rsa-register-description {
+    color: #697991;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.rsa-register-feature {
+    background: #fff;
+    border-left: 4px solid #2869c7;
+    border-radius: 8px;
+    padding: 17px 20px;
+    margin-top: 16px;
+    box-shadow: 0 5px 20px rgba(25, 55, 94, 0.06);
+}
+
+    .rsa-register-feature h5 {
+        color: #173457;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .rsa-register-feature p {
+        color: #748096;
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+.rsa-register-card {
+    background: #fff;
+    padding: 35px;
+    border: 1px solid #e3eaf4;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(25, 55, 94, 0.09);
+}
+
+.rsa-register-heading {
+    margin-bottom: 25px;
+}
+
+    .rsa-register-heading > span {
+        color: #2869c7;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+    }
+
+    .rsa-register-heading h2 {
+        color: #173457;
+        font-size: 30px;
+        font-weight: 800;
+        margin: 9px 0;
+    }
+
+    .rsa-register-heading p {
+        color: #748096;
+        margin: 0;
+    }
+
+.rsa-register-card .form-label {
+    color: #293f5b;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.rsa-register-card .form-control,
+.rsa-register-card .form-select {
+    min-height: 48px;
+    padding: 11px 13px;
+    border: 1px solid #dce4ef;
+    border-radius: 8px;
+}
+
+.rsa-register-card textarea.form-control {
+    min-height: 100px;
+}
+
+.rsa-register-card .form-control:focus,
+.rsa-register-card .form-select:focus {
+    border-color: #2869c7;
+    box-shadow: 0 0 0 3px rgba(40, 105, 199, 0.12);
+}
+
+.rsa-register-card .text-danger {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.rsa-register-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #205fba;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+    .rsa-register-btn:hover {
+        background: #174888;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+@media (max-width: 767px) {
+    .rsa-register-card {
+        padding: 24px 18px;
+    }
+
+    .rsa-register-heading h2 {
+        font-size: 25px;
+    }
+
+    .rsa-register-info {
+        padding: 10px 3px;
+    }
+}
+/*-------------------------------------------------------------------------*/
+
+/* STUDENT REGISTRATION MODAL */
+
+.rsa-register-modal {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(18, 42, 75, 0.18);
+}
+
+    .rsa-register-modal .modal-header {
+        padding: 25px 28px;
+        border-bottom: 1px solid #e7edf5;
+        background: #f5f8fd;
+    }
+
+.rsa-modal-label {
+    color: #2869c7;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.rsa-register-modal .modal-title {
+    color: #173457;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.rsa-register-modal .modal-body {
+    padding: 28px;
+}
+
+.rsa-register-modal .form-label {
+    color: #293f5b;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.rsa-register-modal .form-control,
+.rsa-register-modal .form-select {
+    min-height: 46px;
+    border: 1px solid #dce4ef;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.rsa-register-modal textarea.form-control {
+    min-height: 90px;
+}
+
+.rsa-register-modal .form-control:focus,
+.rsa-register-modal .form-select:focus {
+    border-color: #2869c7;
+    box-shadow: 0 0 0 3px rgba(40, 105, 199, 0.12);
+}
+
+.rsa-register-btn {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #205fba;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+    .rsa-register-btn:hover {
+        background: #174888;
+        color: #fff;
+    }
+
+@media (max-width: 575px) {
+    .rsa-register-modal .modal-header {
+        padding: 20px;
+    }
+
+    .rsa-register-modal .modal-body {
+        padding: 20px;
+    }
+
+    .rsa-register-modal .modal-title {
+        font-size: 21px;
+    }
+}
+/* Language Switcher */
+.rsa-language-btn {
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .rsa-language-btn:hover,
+    .rsa-language-btn.active {
+        background: #fff;
+        color: #075b91;
+    }
+
+/* Social Media Icons */
+.rsa-social-link {
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+    .rsa-social-link:hover {
+        color: #ffd166;
+        transform: translateY(-2px);
+    }
+/*    -----------------------------------------------------------------------*/
+/* Hide Google Translate top information bar */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Remove blank space created by Google Translate */
+html,
+body {
+    top: 0 !important;
+    margin-top: 0 !important;
+    position: static !important;
+}
+
+/* Hide Google Translate tooltip */
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+/* Hide Google Translate highlight */
+.goog-text-highlight {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+

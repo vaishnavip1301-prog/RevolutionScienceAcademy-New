@@ -1,0 +1,258 @@
+﻿@{
+    ViewData["Title"] = "Events";
+
+    var academicImages = new[] { "academic1.jpg", "academic2.jpg", "academic3.jpg" };
+    var culturalImages = new[] { "cultural1.jpg", "cultural2.jpg", "cultural3.jpg" };
+
+    var motivationalImages = Enumerable.Range(1, 29)
+        .Select(i => $"event{i}.jpg")
+        .ToArray();
+
+    var eventGroups = new[]
+    {
+        new {
+            Category = "academic",
+            Label = "Academic",
+            Title = "Academic Activities",
+            Description = "Learning activities and academic moments.",
+            Images = academicImages
+        },
+        new {
+            Category = "cultural",
+            Label = "Cultural",
+            Title = "Cultural Celebrations",
+            Description = "Celebrations, participation and academy memories.",
+            Images = culturalImages
+        },
+        new {
+            Category = "motivation",
+            Label = "Motivational",
+            Title = "Academy Events",
+            Description = "Memorable moments and student activities.",
+            Images = motivationalImages
+        }
+    };
+}
+
+<div class="rsa-events-page">
+
+    <!-- HERO -->
+    <section class="rsa-events-hero">
+        <div class="rsa-events-hero-overlay"></div>
+
+        <div class="container rsa-events-hero-content">
+            <span class="rsa-events-eyebrow">
+                REVOLUTION SCIENCE ACADEMY
+            </span>
+
+            <h1>Events That Inspire Excellence</h1>
+
+            <p>
+                Celebrating learning, talent, achievements and
+                unforgettable memories beyond the classroom.
+            </p>
+
+            <a href="#events-gallery" class="btn rsa-events-primary-btn">
+                Explore Our Events <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="rsa-events-intro">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <span class="rsa-events-section-label">
+                        LIFE AT OUR ACADEMY
+                    </span>
+
+                    <h2>Learning Beyond the Classroom</h2>
+
+                    <p>
+                        At Revolution Science Academy, students get
+                        opportunities to learn, participate and grow.
+                        Our events celebrate academic learning,
+                        cultural activities, teamwork and memorable
+                        experiences throughout their journey.
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="rsa-events-highlight">
+                        <div class="rsa-events-highlight-icon">★</div>
+                        <div>
+                            <h3>Learn. Participate. Achieve.</h3>
+                            <p>
+                                Every experience is a new opportunity
+                                to build confidence and move forward.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="rsa-events-gallery-section" id="events-gallery">
+        <div class="container">
+
+            <div class="rsa-events-heading text-center">
+                <span class="rsa-events-section-label">OUR GALLERY</span>
+                <h2>Moments Worth Remembering</h2>
+                <p>
+                    Explore photographs from activities and events
+                    at Revolution Science Academy.
+                </p>
+            </div>
+
+            <div class="rsa-events-filters">
+                <button type="button"
+                        class="rsa-event-filter active"
+                        data-filter="all"
+                        aria-pressed="true">
+                    All Events
+                </button>
+
+                @* <button type="button"
+                        class="rsa-event-filter"
+                        data-filter="academic"
+                        aria-pressed="false">
+                    Academic
+                </button> *@
+
+                @* <button type="button"
+                        class="rsa-event-filter"
+                        data-filter="cultural"
+                        aria-pressed="false">
+                    Cultural
+                </button> *@
+
+                @* <button type="button"
+                        class="rsa-event-filter"
+                        data-filter="motivation"
+                        aria-pressed="false">
+                    Motivational
+                </button> *@
+            </div>
+
+            <div class="row g-4 rsa-events-grid">
+
+                @foreach (var group in eventGroups)
+                {
+                    var counter = 0;
+
+                    foreach (var image in group.Images)
+                    {
+                        counter++;
+
+                        var imagePath = Url.Content("~/images/events/" + image);
+                        var title = group.Category == "academic"
+                            ? $"Academic Activity {counter}"
+                            : group.Category == "cultural"
+                                ? $"Cultural Event {counter}"
+                                : $"Academy Event {counter}";
+
+                        <div class="col-sm-6 col-lg-4 rsa-event-item"
+                             data-category="@group.Category">
+
+                            <article class="rsa-event-card">
+
+                                <button type="button"
+                                        class="rsa-event-image-button"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#rsaEventModal"
+                                        data-image="@imagePath"
+                                        data-title="@title"
+                                        aria-label="View @title">
+
+                                    <img src="@imagePath"
+                                         alt="@title"
+                                         loading="lazy"
+                                         onerror="this.closest('.rsa-event-item').classList.add('rsa-event-image-missing')" />
+
+                                    <span class="rsa-event-image-zoom">
+                                        View Photo ↗
+                                    </span>
+                                </button>
+
+                                <div class="rsa-event-card-content">
+                                    <span class="rsa-event-category @group.Category">
+                                        @group.Label
+                                    </span>
+
+                                    <h3>@title</h3>
+
+                                    <p>@group.Description</p>
+                                </div>
+                            </article>
+                        </div>
+                    }
+                }
+
+            </div>
+
+            <p class="rsa-events-gallery-note">
+                * Gallery photos are loaded from the images folder in the project.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rsa-events-cta">
+        <div class="container">
+            <div class="rsa-events-cta-inner">
+                <span class="rsa-events-section-label">
+                    JOIN OUR ACADEMY
+                </span>
+
+                <h2>Be Part of Our Journey</h2>
+
+                <p>
+                    Take the next step towards your academic goals
+                    with Revolution Science Academy.
+                </p>
+
+                <a asp-controller="Enquiry"
+                   asp-action="Enquiry"
+                   class="btn rsa-events-primary-btn">
+                    Enquire Now <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO MODAL -->
+    <div class="modal fade rsa-event-modal"
+         id="rsaEventModal"
+         tabindex="-1"
+         aria-labelledby="rsaEventModalTitle"
+         aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rsaEventModalTitle">
+                        Event Photo
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <img id="rsaEventModalImage"
+                         src=""
+                         alt="Event photo"
+                         class="img-fluid" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

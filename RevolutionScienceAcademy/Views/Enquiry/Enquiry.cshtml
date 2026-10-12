@@ -1,0 +1,172 @@
+﻿@model RevolutionScienceAcademy.Models.EnquiryModel
+
+@{
+    ViewData["Title"] = "Enquiry";
+}
+
+<section class="rsa-enquiry-page">
+    <div class="container">
+
+        <div class="rsa-enquiry-card">
+            <div class="rsa-enquiry-header text-center">
+                <span class="rsa-enquiry-label">
+                    REVOLUTION SCIENCE ACADEMY
+                </span>
+
+                <h1>Enquire Now</h1>
+
+                <p>
+                    Share your details and our academic counselor
+                    will contact you shortly.
+                </p>
+            </div>
+            <div class="rsa-enquiry-body">
+
+                @if (TempData["EnquirySuccess"] != null)
+                {
+                    <div class="alert alert-success" role="alert">
+                        @TempData["EnquirySuccess"]
+                    </div>
+                }
+
+                <form asp-controller="Enquiry"
+                      asp-action="Index"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label asp-for="StudentName"
+                                   class="form-label">
+                                Student Full Name
+                                <span class="rsa-required">*</span>
+                            </label>
+
+                            <input asp-for="StudentName"
+                                   class="form-control"
+                                   placeholder="Enter your full name"
+                                   autocomplete="name" />
+
+                            <span asp-validation-for="StudentName"
+                                  class="text-danger">
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Phone"
+                                   class="form-label">
+                                Phone Number
+                                <span class="rsa-required">*</span>
+                            </label>
+
+                            <input asp-for="Phone"
+                                   class="form-control"
+                                   type="tel"
+                                   placeholder="Enter phone number"
+                                   autocomplete="tel" />
+
+                            <span asp-validation-for="Phone"
+                                  class="text-danger">
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Email"
+                                   class="form-label">
+                                Email Address
+                            </label>
+
+                            <input asp-for="Email"
+                                   class="form-control"
+                                   type="email"
+                                   placeholder="Enter email address"
+                                   autocomplete="email" />
+
+                            <span asp-validation-for="Email"
+                                  class="text-danger">
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Course"
+                                   class="form-label">
+                                Course Interested In
+                                <span class="rsa-required">*</span>
+                            </label>
+
+                            <select asp-for="Course"
+                                    class="form-select">
+
+                                <option value="">
+                                    Select your course
+                                </option>
+
+                                <option value="11th Science">
+                                    11th Science Foundation
+                                </option>
+
+                                <option value="12th Science">
+                                    12th Science Intensive
+                                </option>
+
+                                <option value="JEE">
+                                    JEE Preparation
+                                </option>
+
+                                <option value="NEET">
+                                    NEET Preparation
+                                </option>
+
+                                <option value="Board Exam">
+                                    Board Exam Special
+                                </option>
+                            </select>
+
+                            <span asp-validation-for="Course"
+                                  class="text-danger">
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Message"
+                                   class="form-label">
+                                Message
+                            </label>
+
+                            <textarea asp-for="Message"
+                                      class="form-control rsa-enquiry-message"
+                                      rows="3"
+                                      placeholder="Tell us what you would like to know..."></textarea>
+
+                            <span asp-validation-for="Message"
+                                  class="text-danger">
+                            </span>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit"
+                                    class="btn rsa-enquiry-submit">
+
+                                <i class="bi bi-send-fill me-2"></i>
+                                Submit Enquiry
+                                <i class="bi bi-arrow-right ms-2"></i>
+
+                            </button>
+
+                            <p class="rsa-enquiry-note">
+                                <i class="bi bi-shield-check me-1"></i>
+                                Your information will be used to contact you
+                                regarding your enquiry.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

@@ -1,0 +1,299 @@
+﻿@model RevolutionScienceAcademy.Models.ContactMessage
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="rsa-contact-page">
+
+    <!-- HERO SECTION -->
+    <section class="rsa-contact-hero">
+        <div class="rsa-contact-hero-overlay"></div>
+
+        <div class="container rsa-contact-hero-content">
+            <span class="rsa-contact-kicker">REVOLUTION SCIENCE ACADEMY</span>
+
+            <h1>Contact <span>Us</span></h1>
+
+            <p>
+                Have questions about courses, admissions or our academy?
+                Our team is here to help you.
+            </p>
+
+            <a href="#contact-details" class="btn rsa-contact-hero-btn">
+                Get In Touch <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="rsa-contact-main" id="contact-details">
+        <div class="container">
+
+            <div class="rsa-contact-heading">
+                <span class="rsa-contact-kicker">WE ARE HERE TO HELP</span>
+                <h2>Let's Start a Conversation</h2>
+                <p>
+                    Contact us for course information, admission enquiries
+                    and any questions about our academy.
+                </p>
+            </div>
+
+            @if (TempData["ContactSuccess"] != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @TempData["ContactSuccess"]
+                </div>
+            }
+
+            <div class="row g-4 g-xl-5">
+
+                <!-- CONTACT INFORMATION -->
+                <div class="col-lg-5">
+                    <div class="rsa-contact-info-panel">
+
+                        <span class="rsa-contact-info-label">
+                            CONTACT INFORMATION
+                        </span>
+
+                        <h3>We'd Love to Hear From You</h3>
+
+                        <p class="rsa-contact-info-intro">
+                            Reach out to our team for assistance with your
+                            academic journey and admission enquiries.
+                        </p>
+
+                        <div class="rsa-contact-info-item">
+                            <div class="rsa-contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+                                          stroke="currentColor" stroke-width="1.8" />
+                                    <circle cx="12" cy="10" r="2.5"
+                                            stroke="currentColor" stroke-width="1.8" />
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h4>Our Address</h4>
+                                <p>Revolution Science Academy</p>
+                                <p>Kai. Kashinath Gaikawad Sankul, Someshwar Mandir Road, Near Pirsaheb Mandir, Karanjepul, Someshwar nagar, Tal. Baramati, Dist. Pune. Pin. 412306.</p>
+                            </div>
+                        </div>
+
+                        <div class="rsa-contact-info-item">
+                            <div class="rsa-contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 3h4l2 5-2.5 1.8a15 15 0 0 0 5.7 5.7L16 13l5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"
+                                          stroke="currentColor" stroke-width="1.8"
+                                          stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>For course details and admission enquiries.</p>
+                                <p class="rsa-contact-small-note">
+                                    +91 8888401888
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="rsa-contact-info-item">
+                            <div class="rsa-contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="5" width="18" height="14"
+                                          rx="2" stroke="currentColor" stroke-width="1.8" />
+                                    <path d="m4 7 8 6 8-6"
+                                          stroke="currentColor" stroke-width="1.8"
+                                          stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>Send us your questions or enquiries.</p>
+                                <p class="rsa-contact-small-note">
+                                    revolutionscienceacademy@gmail.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="rsa-contact-info-item">
+                            <div class="rsa-contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="9"
+                                            stroke="currentColor" stroke-width="1.8" />
+                                    <path d="M12 7v5l3.5 2"
+                                          stroke="currentColor" stroke-width="1.8"
+                                          stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Contact the academy to confirm working hours.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="col-lg-7">
+                    <div class="rsa-contact-form-panel">
+
+                        <span class="rsa-contact-kicker">SEND AN ENQUIRY</span>
+                        <h3>How Can We Help You?</h3>
+
+                        <p class="rsa-contact-form-description">
+                            Complete the form and provide your contact details.
+                        </p>
+
+                        <form asp-controller="Contact"
+                              asp-action="Index"
+                              method="post">
+
+                            @Html.AntiForgeryToken()
+
+                            <div asp-validation-summary="ModelOnly"
+                                 class="text-danger mb-3"></div>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label asp-for="Name" class="form-label"></label>
+
+                                    <input asp-for="Name"
+                                           class="form-control rsa-contact-input"
+                                           placeholder="Enter your full name"
+                                           autocomplete="name" />
+
+                                    <span asp-validation-for="Name"
+                                          class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="Phone" class="form-label"></label>
+
+                                    <input asp-for="Phone"
+                                           class="form-control rsa-contact-input"
+                                           placeholder="Enter your phone number"
+                                           autocomplete="tel" />
+
+                                    <span asp-validation-for="Phone"
+                                          class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label asp-for="Email" class="form-label"></label>
+
+                                    <input asp-for="Email"
+                                           class="form-control rsa-contact-input"
+                                           placeholder="Enter your email address"
+                                           autocomplete="email" />
+
+                                    <span asp-validation-for="Email"
+                                          class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label asp-for="Message" class="form-label"></label>
+
+                                    <textarea asp-for="Message"
+                                              class="form-control rsa-contact-input"
+                                              rows="5"
+                                              placeholder="Write your message here"></textarea>
+
+                                    <span asp-validation-for="Message"
+                                          class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit"
+                                            class="btn rsa-contact-submit">
+                                        Submit Enquiry
+                                        <span aria-hidden="true">→</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="rsa-contact-map-section">
+        <div class="container">
+
+            <div class="rsa-contact-heading">
+                <span class="rsa-contact-kicker">FIND OUR LOCATION</span>
+                <h2>Visit Our Academy</h2>
+                <p>
+                    Visit Revolution Science Academy at our location in Someshwar Nagar.
+                </p>
+            </div>
+
+            <div class="rsa-contact-map">
+                <iframe src="https://maps.google.com/maps?q=Kai.%20Kashinath%20Gaikawad%20Sankul%2C%20Someshwar%20Mandir%20Road%2C%20Near%20Pirsaheb%20Mandir%2C%20Karanjepul%2C%20Someshwar%20Nagar%2C%20Tal.%20Baramati%2C%20Dist.%20Pune%2C%20412306&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        title="Revolution Science Academy - Academy Location"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="mb-2">
+                    <strong>Address:</strong>
+                    Kai. Kashinath Gaikawad Sankul, Someshwar Mandir Road,
+                    Near Pirsaheb Mandir, Karanjepul, Someshwar Nagar,
+                    Tal. Baramati, Dist. Pune – 412306.
+                </p>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Kai.%20Kashinath%20Gaikawad%20Sankul%2C%20Someshwar%20Mandir%20Road%2C%20Near%20Pirsaheb%20Mandir%2C%20Karanjepul%2C%20Someshwar%20Nagar%2C%20Baramati%2C%20Pune%20412306"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn rsa-contact-submit">
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    Get Directions
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="rsa-contact-cta">
+        <div class="container">
+            <div class="rsa-contact-cta-inner">
+
+                <span class="rsa-contact-kicker">YOUR FUTURE STARTS HERE</span>
+
+                <h2>Ready to Begin Your Learning Journey?</h2>
+
+                <p>
+                    Connect with Revolution Science Academy to learn
+                    more about courses, preparation and admissions.
+                </p>
+
+                <a asp-controller="Enquiry"
+                   asp-action="Enquiry"
+                   class="btn rsa-contact-cta-btn">
+                    Enquire About Admissions
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

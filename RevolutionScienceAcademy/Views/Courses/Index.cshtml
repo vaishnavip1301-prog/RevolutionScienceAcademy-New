@@ -1,0 +1,443 @@
+﻿@{
+    ViewData["Title"] = "Our Courses";
+}
+
+<!-- COURSES HERO -->
+<section class="courses-hero">
+    <div class="courses-hero-overlay"></div>
+
+    <div class="container courses-hero-content">
+        <span class="courses-eyebrow">
+            REVOLUTION SCIENCE ACADEMY
+        </span>
+
+        <h1>
+            Discover Your Potential.
+            <span>Choose Your Path to Success.</span>
+        </h1>
+
+        <p>
+            Explore our Science courses designed to build strong
+            fundamentals, develop problem-solving skills and prepare
+            students for board examinations and competitive entrance exams.
+        </p>
+
+        <div class="courses-hero-buttons">
+            <a href="#all-courses" class="btn btn-warning btn-lg">
+                Explore Courses
+                <i class="bi bi-arrow-down-right ms-2"></i>
+            </a>
+
+            <a asp-controller="Enquiry"
+               asp-action="Enquiry"
+               class="btn btn-outline-light btn-lg">
+                Enquire Now
+            </a>
+        </div>
+
+        <div class="courses-hero-stats">
+            <div>
+                <strong>11th</strong>
+                <span>Science Foundation</span>
+            </div>
+
+            <div>
+                <strong>12th</strong>
+                <span>Board Preparation</span>
+            </div>
+
+            <div>
+                <strong>JEE & NEET</strong>
+                <span>Entrance Preparation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COURSE INTRODUCTION -->
+<section class="courses-intro-section">
+    <div class="container">
+        <div class="courses-section-heading">
+            <span class="courses-kicker">LEARN. PRACTISE. ACHIEVE.</span>
+
+            <h2>Find the Right Course for Your Goals</h2>
+
+            <p>
+                Whether you are building your Science foundation,
+                preparing for HSC Board examinations or targeting
+                an entrance examination, explore the course that
+                matches your academic goals.
+            </p>
+        </div>
+
+        <div class="courses-quick-links">
+            <a href="#class-11">
+                <i class="bi bi-book-half"></i>
+                11th Science
+            </a>
+
+            <a href="#class-12">
+                <i class="bi bi-mortarboard"></i>
+                12th Science
+            </a>
+
+            <a href="#jee">
+                <i class="bi bi-calculator"></i>
+                JEE Preparation
+            </a>
+
+            <a href="#neet">
+                <i class="bi bi-heart-pulse"></i>
+                NEET Preparation
+            </a>
+
+            <a href="#board">
+                <i class="bi bi-journal-check"></i>
+                Board Exams
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ALL COURSES -->
+<section class="courses-list-section" id="all-courses">
+    <div class="container">
+
+        <div class="courses-section-heading">
+            <span class="courses-kicker">OUR PROGRAMMES</span>
+
+            <h2>Explore Our Courses</h2>
+
+            <p>
+                Learn more about each programme, its learning objectives
+                and the preparation approach.
+            </p>
+        </div>
+
+        <div class="row g-4 mt-3">
+
+            <!-- 11TH SCIENCE -->
+            <div class="col-md-6 col-xl-4" id="class-11">
+                <article class="course-card h-100">
+                    <div class="course-card-image">
+                        <img src="~/images/courses/11th-Science.jpg"
+                             asp-append-version="true"
+                             alt="11th Science foundation course"
+                             loading="lazy" />
+
+                        <span class="course-badge">FOUNDATION</span>
+                    </div>
+
+                    <div class="course-card-body">
+                        <div class="course-card-icon">
+                            <i class="bi bi-book-half"></i>
+                        </div>
+
+                        <h3>11th Science</h3>
+
+                        <p>
+                            Build a strong foundation in Science with
+                            concept-based learning, classroom practice
+                            and a structured approach to every chapter.
+                        </p>
+
+                        <h4>Key Learning Areas</h4>
+
+                        <ul>
+                            <li>Physics fundamentals and numericals</li>
+                            <li>Chemistry concepts and reactions</li>
+                            <li>Mathematics or Biology</li>
+                            <li>Chapter-wise practice and revision</li>
+                        </ul>
+
+                        <div class="course-card-footer">
+                            <a asp-controller="Courses"
+                               asp-action="EleventhScience"
+                               class="btn btn-outline-primary">
+                                Explore Course
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 12TH SCIENCE -->
+            <div class="col-md-6 col-xl-4" id="class-12">
+                <article class="course-card h-100">
+                    <div class="course-card-image">
+                        <img src="~/images/courses/12th-Science.jpg"
+                             asp-append-version="true"
+                             alt="12th Science academic preparation"
+                             loading="lazy" />
+
+                        <span class="course-badge">CLASS 12</span>
+                    </div>
+
+                    <div class="course-card-body">
+                        <div class="course-card-icon">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+
+                        <h3>12th Science</h3>
+
+                        <p>
+                            Strengthen subject knowledge, prepare for
+                            HSC examinations and organise your studies
+                            around syllabus completion and revision.
+                        </p>
+
+                        <h4>Key Learning Areas</h4>
+
+                        <ul>
+                            <li>Physics theory and derivations</li>
+                            <li>Chemistry and numerical problems</li>
+                            <li>Mathematics or Biology</li>
+                            <li>Revision and model papers</li>
+                        </ul>
+
+                        <div class="course-card-footer">
+                            <a asp-controller="Courses"
+                               asp-action="TwelfthScience"
+                               class="btn btn-outline-primary">
+                                Explore Course
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- JEE -->
+            <div class="col-md-6 col-xl-4" id="jee">
+                <article class="course-card h-100">
+                    <div class="course-card-image">
+                        <img src="~/images/courses/jee.jpg"
+                             asp-append-version="true"
+                             alt="JEE Main and engineering entrance preparation"
+                             loading="lazy" />
+
+                        <span class="course-badge">ENGINEERING</span>
+                    </div>
+
+                    <div class="course-card-body">
+                        <div class="course-card-icon">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+
+                        <h3>JEE Preparation</h3>
+
+                        <p>
+                            Develop conceptual understanding and
+                            problem-solving skills for engineering
+                            entrance examinations through structured
+                            practice and revision.
+                        </p>
+
+                        <h4>Key Learning Areas</h4>
+
+                        <ul>
+                            <li>Physics concepts and applications</li>
+                            <li>Chemistry topic-wise preparation</li>
+                            <li>Mathematics problem-solving</li>
+                            <li>Mock tests and performance review</li>
+                        </ul>
+
+                        <div class="course-card-footer">
+                            <a asp-controller="Courses"
+                               asp-action="Jee"
+                               class="btn btn-outline-primary">
+                                Explore Course
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- NEET -->
+            <div class="col-md-6 col-xl-4" id="neet">
+                <article class="course-card h-100">
+                    <div class="course-card-image">
+                        <img src="~/images/courses/neet.jpg"
+                             asp-append-version="true"
+                             alt="NEET UG medical entrance preparation"
+                             loading="lazy" />
+
+                        <span class="course-badge">MEDICAL</span>
+                    </div>
+
+                    <div class="course-card-body">
+                        <div class="course-card-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+
+                        <h3>NEET UG Preparation</h3>
+
+                        <p>
+                            Prepare for medical entrance examinations
+                            through concept-based learning, Biology
+                            revision, numerical practice and mock tests.
+                        </p>
+
+                        <h4>Key Learning Areas</h4>
+
+                        <ul>
+                            <li>Biology concepts and diagrams</li>
+                            <li>Physics formulas and numericals</li>
+                            <li>Chemistry reactions and concepts</li>
+                            <li>Question practice and revision</li>
+                        </ul>
+
+                        <div class="course-card-footer">
+                            <a asp-controller="Courses"
+                               asp-action="Neet"
+                               class="btn btn-outline-primary">
+                                Explore Course
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- BOARD EXAM -->
+            <div class="col-md-6 col-xl-4" id="board">
+                <article class="course-card h-100">
+                    <div class="course-card-image">
+                        <img src="~/images/courses/board-exam.jpg"
+                             asp-append-version="true"
+                             alt="Science board examination preparation"
+                             loading="lazy" />
+
+                        <span class="course-badge">BOARD EXAMS</span>
+                    </div>
+
+                    <div class="course-card-body">
+                        <div class="course-card-icon">
+                            <i class="bi bi-journal-check"></i>
+                        </div>
+
+                        <h3>Board Exam Preparation</h3>
+
+                        <p>
+                            Prepare for 11th and 12th Science examinations
+                            with syllabus-based teaching, answer-writing
+                            practice and consistent revision.
+                        </p>
+
+                        <h4>Key Learning Areas</h4>
+
+                        <ul>
+                            <li>Chapter-wise syllabus coverage</li>
+                            <li>Important questions and numericals</li>
+                            <li>Written answers and derivations</li>
+                            <li>Model papers and practice tests</li>
+                        </ul>
+
+                        <div class="course-card-footer">
+                            <a asp-controller="Courses"
+                               asp-action="BoardExam"
+                               class="btn btn-outline-primary">
+                                Explore Course
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LEARNING APPROACH -->
+<section class="courses-approach-section">
+    <div class="container">
+        <div class="courses-section-heading">
+            <span class="courses-kicker">OUR APPROACH</span>
+
+            <h2>A Structured Approach to Learning</h2>
+
+            <p>
+                Build understanding step by step and work towards
+                your academic goals with regular practice.
+            </p>
+        </div>
+
+        <div class="row g-4 mt-3">
+            <div class="col-md-6 col-lg-3">
+                <div class="approach-card h-100">
+                    <span>01</span>
+                    <i class="bi bi-lightbulb"></i>
+                    <h3>Understand</h3>
+                    <p>
+                        Develop clarity in fundamental concepts
+                        before solving advanced questions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="approach-card h-100">
+                    <span>02</span>
+                    <i class="bi bi-pencil-square"></i>
+                    <h3>Practise</h3>
+                    <p>
+                        Apply your knowledge through exercises,
+                        numericals and topic-wise questions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="approach-card h-100">
+                    <span>03</span>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <h3>Revise</h3>
+                    <p>
+                        Review notes, formulas and difficult topics
+                        to strengthen your understanding.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="approach-card h-100">
+                    <span>04</span>
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h3>Improve</h3>
+                    <p>
+                        Use practice assessments to identify gaps
+                        and refine your preparation strategy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ENQUIRY CTA -->
+<section class="courses-enquiry-section" id="enquiry">
+    <div class="container">
+        <div class="courses-enquiry-content text-center">
+            <span class="courses-eyebrow">
+                YOUR FUTURE STARTS HERE
+            </span>
+
+            <h2>Ready to Choose Your Course?</h2>
+
+            <p>
+                Contact Revolution Science Academy to learn about
+                available batches, course details, schedules and admissions.
+            </p>
+
+            <a asp-controller="Contact"
+               asp-action="Index"
+               class="btn btn-warning btn-lg">
+                Enquire About Courses
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>

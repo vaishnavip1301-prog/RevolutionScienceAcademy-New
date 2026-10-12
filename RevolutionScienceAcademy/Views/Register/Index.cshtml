@@ -1,0 +1,154 @@
+﻿
+<!-- Registration Popup -->
+<div class="modal fade"
+     id="registerModal"
+     tabindex="-1"
+     aria-labelledby="registerModalLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+
+        <div class="modal-content rsa-register-modal">
+
+            <div class="modal-header rsa-register-header">
+                <div>
+                    <span class="rsa-register-eyebrow">
+                        REVOLUTION SCIENCE ACADEMY
+                    </span>
+
+                    <h4 class="modal-title mt-2"
+                        id="registerModalLabel">
+                        Student Registration
+                    </h4>
+
+                    <p class="mb-0 mt-1">
+                        Register for your preferred course.
+                    </p>
+                </div>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body p-4">
+
+                <form asp-controller="Register"
+                      asp-action="Index"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="StudentName">
+                                Student Full Name
+                            </label>
+                            <input type="text"
+                                   id="StudentName"
+                                   name="StudentName"
+                                   class="form-control"
+                                   placeholder="Enter student's full name"
+                                   maxlength="100"
+                                   required />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="MobileNumber">
+                                Mobile Number
+                            </label>
+                            <input type="tel"
+                                   id="MobileNumber"
+                                   name="MobileNumber"
+                                   class="form-control"
+                                   placeholder="Enter 10-digit mobile number"
+                                   pattern="[6-9][0-9]{9}"
+                                   maxlength="10"
+                                   required />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="Email">
+                                Email Address
+                            </label>
+                            <input type="email"
+                                   id="Email"
+                                   name="Email"
+                                   class="form-control"
+                                   placeholder="Enter email address"
+                                   required />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label" for="ClassName">
+                                Select Class
+                            </label>
+                            <select id="ClassName"
+                                    name="ClassName"
+                                    class="form-select"
+                                    required>
+                                <option value="">Choose class</option>
+                                <option value="11th Science">11th Science</option>
+                                <option value="12th Science">12th Science</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="Course">
+                                Select Course
+                            </label>
+                            <select id="Course"
+                                    name="Course"
+                                    class="form-select"
+                                    required>
+                                <option value="">Choose course</option>
+                                <option value="JEE">JEE Preparation</option>
+                                <option value="NEET">NEET Preparation</option>
+                                <option value="Board Exam">Board Exam Preparation</option>
+                                <option value="JEE Foundation">JEE Foundation</option>
+                                <option value="NEET Crash Course">NEET Crash Course</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="SchoolName">
+                                School / College Name
+                            </label>
+                            <input type="text"
+                                   id="SchoolName"
+                                   name="SchoolName"
+                                   class="form-control"
+                                   placeholder="Enter school or college name"
+                                   required />
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="Address">
+                                Full Address
+                            </label>
+                            <textarea id="Address"
+                                      name="Address"
+                                      class="form-control"
+                                      rows="3"
+                                      placeholder="Enter your full address"
+                                      required></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="rsa-register-btn">
+                            Submit Registration
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

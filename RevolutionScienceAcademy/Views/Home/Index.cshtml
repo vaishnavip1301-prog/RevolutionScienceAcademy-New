@@ -1,0 +1,855 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+<section class="rsa-hero">
+    <div class="container">
+        <div class="row align-items-center g-0">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6">
+                <div class="rsa-hero-content">
+
+                    <div class="rsa-hero-label">
+                        <i class="bi bi-mortarboard-fill me-2"></i>
+                        REVOLUTION ACADEMY
+                    </div>
+
+                    <h1 class="rsa-hero-title">
+                        Building
+                        <span>Future Scholars</span>
+                        for JEE/NEET
+                    </h1>
+
+                    <p class="rsa-hero-description">
+                        Our intensive programs for 11th &amp; 12th Science students
+                        combine <strong>conceptual clarity</strong> with
+                        <strong>competitive exam preparation.</strong>
+                    </p>
+
+                    <div class="rsa-hero-quote">
+                        <i class="bi bi-quote"></i>
+                        <div>
+                            <p>
+                                “Success is where preparation and opportunity meet.”
+                            </p>
+                            <span>— Bobby Unser</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+
+                       
+                        <button type="button"
+                                class="rsa-hero-primary border-0"
+                                data-bs-toggle="modal"
+                                data-bs-target="#registerModal">
+                            <i class="bi bi-person-plus-fill me-2"></i>
+                            Register Now
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+
+                        @* <a asp-controller="Courses"
+                           asp-action="Index"
+                           class="rsa-hero-secondary">
+                            <i class="bi bi-eye-fill me-2"></i>
+                            View Programs
+                        </a> *@
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-6">
+                <div class="rsa-hero-image-area">
+
+                    <img src="~/images/lecture/lecture.jpg"
+                         alt="Revolution Academy Students"
+                         class="rsa-hero-image" />
+
+                    <!-- Result Card -->
+                    <div class="rsa-hero-card">
+
+                        <div class="rsa-hero-card-icon">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+
+                        <div>
+                            <strong>Proven Results</strong>
+                            <span>1500+ JEE/NEET Selections</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE US STRIP
+========================= -->
+<section class="rsa-focus-strip">
+    <div class="container">
+        <div class="row g-0">
+
+            <div class="col-md-4">
+                <div class="rsa-focus-item">
+
+                    <div class="rsa-card-icon">
+                        <i class="bi bi-book-half"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="rsa-focus-title">
+                            Expert Faculty
+                        </h5>
+
+                        <p>
+                            IIT/NIT alumni and experienced educators
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="rsa-focus-item">
+
+                    <div class="rsa-card-icon">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="rsa-focus-title">
+                            Comprehensive Curriculum
+                        </h5>
+
+                        <p>
+                            JEE/NEET and Board exam focused
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="rsa-focus-item">
+
+                    <div class="rsa-card-icon">
+                        <i class="bi bi-bar-chart-line-fill"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="rsa-focus-title">
+                            Result-Oriented Approach
+                        </h5>
+
+                        <p>
+                            85%+ students securing top ranks
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================
+     WHY REVOLUTION ACADEMY
+========================= -->
+<section class="rsa-section rsa-section-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="rsa-section-label">
+                WHY CHOOSE US?
+            </span>
+
+            <h2 class="rsa-section-title">
+                Transforming Students Into
+                <span>Top Performers</span>
+            </h2>
+
+            <p class="rsa-section-description mx-auto">
+                Our scientifically designed program bridges the gap between
+                school education and competitive exam requirements,
+                ensuring holistic development.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CARD 1 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-card h-100">
+
+                    <div class="rsa-card-icon">
+                        <i class="bi bi-journal-text"></i>
+                    </div>
+
+                    <h3>
+                        Comprehensive Curriculum
+                    </h3>
+
+                    <p>
+                        Structured syllabus covering all JEE/NEET and board
+                        exam topics with concept clarity as the primary focus.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-card h-100">
+
+                    <div class="rsa-card-icon">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <h3>
+                        Expert Faculty
+                    </h3>
+
+                    <p>
+                        Learn from IIT/NIT alumni and experienced educators
+                        who specialize in competitive exam preparation.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-card h-100">
+
+                    <div class="rsa-card-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h3>
+                        Result-Oriented Approach
+                    </h3>
+
+                    <p>
+                        Proven track record with 85%+ of our students
+                        securing ranks in top engineering and medical colleges.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACADEMIC EXCELLENCE
+========================= -->
+<section class="rsa-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="rsa-section-label">
+                OUR ACHIEVEMENTS
+            </span>
+
+            <h2 class="rsa-section-title">
+                Building <span>Academic Excellence</span>
+            </h2>
+
+            <p class="rsa-section-description mx-auto">
+                Our proven track record speaks for itself. We transform
+                potential into performance through dedicated mentoring
+                and scientifically designed curriculum.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="rsa-stat-card text-center h-100">
+
+                    <div class="rsa-stat-number">
+                        1500+
+                    </div>
+
+                    <div class="rsa-stat-label">
+                        JEE/NEET Selections
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="rsa-stat-card text-center h-100">
+
+                    <div class="rsa-stat-number">
+                        98%
+                    </div>
+
+                    <div class="rsa-stat-label">
+                        Board Exam Pass Rate
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="rsa-stat-card text-center h-100">
+
+                    <div class="rsa-stat-number">
+                        85%+
+                    </div>
+
+                    <div class="rsa-stat-label">
+                        Students Above 90% in PCMB
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COURSES PREVIEW
+========================= -->
+<section class="rsa-section rsa-section-light">
+
+    <div class="container">
+
+        <div class="d-flex flex-column flex-md-row
+            justify-content-between align-items-md-end
+            gap-3 mb-5">
+
+            <div>
+
+                <span class="rsa-section-label">
+                    ACADEMIC PROGRAMS
+                </span>
+
+                <h2 class="rsa-section-title mb-2">
+                    Our <span>Courses</span>
+                </h2>
+
+                <p class="rsa-section-description mb-0">
+                    Scientifically designed programs for board exams,
+                    JEE and NEET preparation.
+                </p>
+
+            </div>
+
+            <a asp-controller="Courses"
+               asp-action="Index"
+               class="btn btn-outline-primary rounded-pill px-4">
+                View All Courses
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- 11TH -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-course-card h-100">
+
+                    <img src="~/images/courses/11th-science.jpg"
+                         alt="11th Science Foundation"
+                         class="rsa-course-image" />
+
+                    <div class="rsa-course-content">
+
+                        <span class="badge rounded-pill mb-3">
+                            FOUNDATION
+                        </span>
+
+                        <h3 class="rsa-course-title">
+                            11th Science Foundation
+                        </h3>
+
+                        <p class="rsa-course-description">
+                            Build strong fundamentals in Physics,
+                            Chemistry and Mathematics with CBSE/
+                            State Board aligned curriculum.
+                        </p>
+
+                        <a asp-controller="Courses"
+                           asp-action="EleventhScience"
+                           class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                            Explore Course
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 12TH -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-course-card h-100">
+
+                    <img src="~/images/courses/12th-science.jpg"
+                         alt="12th Science Intensive"
+                         class="rsa-course-image" />
+
+                    <div class="rsa-course-content">
+
+                        <span class="badge rounded-pill mb-3">
+                            INTENSIVE
+                        </span>
+
+                        <h3 class="rsa-course-title">
+                            12th Science Intensive
+                        </h3>
+
+                        <p class="rsa-course-description">
+                            Complete syllabus coverage with competitive
+                            exam preparation for board excellence and
+                            JEE/NEET success.
+                        </p>
+
+                        <a asp-controller="Courses"
+                           asp-action="TwelfthScience"
+                           class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                            Explore Course
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JEE -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-course-card h-100">
+
+                    <img src="~/images/courses/jee.jpg"
+                         alt="JEE Mains and Advanced"
+                         class="rsa-course-image" />
+
+                    <div class="rsa-course-content">
+
+                        <span class="badge rounded-pill mb-3">
+                            ENGINEERING
+                        </span>
+
+                        <h3 class="rsa-course-title">
+                            JEE Mains &amp; Advanced
+                        </h3>
+
+                        <p class="rsa-course-description">
+                            Specialized program for engineering
+                            aspirants with advanced problem-solving
+                            techniques and test strategies.
+                        </p>
+
+                        <a asp-controller="Courses"
+                           asp-action="Jee"
+                           class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                            Explore Course
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEET -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-course-card h-100">
+
+                    <img src="~/images/courses/neet.jpg"
+                         alt="NEET Preparation"
+                         class="rsa-course-image" />
+
+                    <div class="rsa-course-content">
+
+                        <span class="badge rounded-pill mb-3">
+                            MEDICAL
+                        </span>
+
+                        <h3 class="rsa-course-title">
+                            NEET Preparation
+                        </h3>
+
+                        <p class="rsa-course-description">
+                            Comprehensive medical entrance coaching
+                            with NCERT focus and advanced biology
+                            concepts.
+                        </p>
+
+                        <a asp-controller="Courses"
+                           asp-action="Neet"
+                           class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                            Explore Course
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOARD -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="rsa-course-card h-100">
+
+                    <img src="~/images/courses/board-exam.jpg"
+                         alt="Board Exam Special"
+                         class="rsa-course-image" />
+
+                    <div class="rsa-course-content">
+
+                        <span class="badge rounded-pill mb-3">
+                            BOARD EXAM
+                        </span>
+
+                        <h3 class="rsa-course-title">
+                            Board Exam Special
+                        </h3>
+
+                        <p class="rsa-course-description">
+                            Crash course for 12th board exams with
+                            focused revision, important questions
+                            and answer writing practice.
+                        </p>
+
+                        <a asp-controller="Courses"
+                           asp-action="BoardExam"
+                           class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                            Explore Course
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TEACHING PHILOSOPHY
+========================= -->
+<section class="rsa-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="rsa-section-label">
+                    OUR APPROACH
+                </span>
+
+                <h2 class="rsa-section-title">
+                    From <span>Concept Clarity</span>
+                    to Exam Excellence
+                </h2>
+
+                <p class="rsa-section-description">
+                    We believe in concept clarity first, followed by
+                    rigorous practice and personalized mentoring to
+                    unlock each student's potential.
+                </p>
+
+                <a asp-controller="About"
+                   asp-action="Index"
+                   class="btn btn-primary rounded-pill px-4 mt-3">
+                    Discover Our Approach
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="row g-3">
+
+                    <div class="col-12">
+                        <div class="rsa-card">
+
+                            <div class="d-flex gap-3 align-items-start">
+
+                                <div class="rsa-card-icon flex-shrink-0">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                </div>
+
+                                <div>
+                                    <h3 class="mb-2">
+                                        Concept Clarity
+                                    </h3>
+
+                                    <p class="mb-0">
+                                        Building strong fundamentals before
+                                        moving towards problem-solving.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="rsa-card">
+
+                            <div class="d-flex gap-3 align-items-start">
+
+                                <div class="rsa-card-icon flex-shrink-0">
+                                    <i class="bi bi-person-check-fill"></i>
+                                </div>
+
+                                <div>
+                                    <h3 class="mb-2">
+                                        Personalized Attention
+                                    </h3>
+
+                                    <p class="mb-0">
+                                        Small batch sizes with individual
+                                        mentoring and doubt support.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="rsa-card">
+
+                            <div class="d-flex gap-3 align-items-start">
+
+                                <div class="rsa-card-icon flex-shrink-0">
+                                    <i class="bi bi-award-fill"></i>
+                                </div>
+
+                                <div>
+                                    <h3 class="mb-2">
+                                        Exam Excellence
+                                    </h3>
+
+                                    <p class="mb-0">
+                                        Optimized preparation for both
+                                        board and competitive examinations.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+<section class="rsa-section rsa-section-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="rsa-section-label">
+                STUDENT VOICES
+            </span>
+
+            <h2 class="rsa-section-title">
+                What Our Students
+                <span>Say</span>
+            </h2>
+
+            <p class="rsa-section-description mx-auto">
+                Experiences from students who have been part of
+                the Revolution Academy learning journey.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Aarav -->
+            <div class="col-lg-4">
+
+                <div class="rsa-testimonial h-100">
+
+                    <div class="rsa-testimonial-icon">
+                        <i class="bi bi-chat-quote-fill"></i>
+                    </div>
+
+                    <p class="rsa-testimonial-text">
+                        “Revolution Academy helped me build a solid
+                        foundation in Physics and Chemistry. The faculty
+                        is amazing and always supportive!”
+                    </p>
+
+                    <div class="rsa-testimonial-name">
+                        Aarav Sharma
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sneha -->
+            <div class="col-lg-4">
+
+                <div class="rsa-testimonial h-100">
+
+                    <div class="rsa-testimonial-icon">
+                        <i class="bi bi-chat-quote-fill"></i>
+                    </div>
+
+                    <p class="rsa-testimonial-text">
+                        “I was struggling with Math, but the practice
+                        problems and doubt sessions turned everything
+                        around. Highly recommend!”
+                    </p>
+
+                    <div class="rsa-testimonial-name">
+                        Sneha Patil
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Rohan -->
+            <div class="col-lg-4">
+
+                <div class="rsa-testimonial h-100">
+
+                    <div class="rsa-testimonial-icon">
+                        <i class="bi bi-chat-quote-fill"></i>
+                    </div>
+
+                    <p class="rsa-testimonial-text">
+                        “I loved the structured curriculum and regular
+                        progress tests. It prepared me well for the board
+                        and competitive exams.”
+                    </p>
+
+                    <div class="rsa-testimonial-name">
+                        Rohan Deshmukh
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+<section class="rsa-cta">
+
+    <div class="container">
+
+        <div class="rsa-cta-content text-center">
+
+            <span class="rsa-section-label">
+                START YOUR JOURNEY
+            </span>
+
+            <h2>
+                Ready to Begin Your
+                <span>Academic Journey?</span>
+            </h2>
+
+            <p>
+                Join Revolution Academy and prepare for your board
+                exams, JEE and NEET with structured guidance.
+            </p>
+
+            <a asp-controller="Enquiry"
+               asp-action="Enquiry"
+               class="btn btn-light rounded-pill px-4 py-3">
+                Enquire Now
+                <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
