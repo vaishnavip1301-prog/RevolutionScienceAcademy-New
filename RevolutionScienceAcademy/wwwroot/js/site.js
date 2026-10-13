@@ -235,7 +235,6 @@ function hideGoogleTranslateBanner() {
 document.addEventListener('DOMContentLoaded', function () {
     hideGoogleTranslateBanner();
 
-    // Google Translate पुन्हा banner तयार करत असेल तर तो hide करा.
     const observer = new MutationObserver(function () {
         hideGoogleTranslateBanner();
     });
